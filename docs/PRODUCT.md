@@ -14,7 +14,7 @@ T01 membangun tiga halaman, navigasi, dan fondasi visual. Bank materi interaktif
 
 ## Batas tetap
 
-Tanpa akun, backend, storage browser, API, pengingat, atau pembuatan hukum agama. Jangan menyatakan materi telah direview tanpa bukti. Draf pada tahap interaktif tidak bertahan setelah reload atau perpindahan halaman. Target aksesibilitas: navigasi keyboard, fokus terlihat, teks minimal 16px, dan layout tanpa overflow pada 320–1440px.
+Tanpa akun, backend, storage browser, API, pengingat, atau pembuatan hukum agama. Jangan menyatakan materi telah direview tanpa bukti. Draf pada tahap interaktif tidak bertahan setelah reload atau perpindahan halaman. Target aksesibilitas: navigasi keyboard, fokus terlihat, teks isi minimal 16px, dan layout tanpa overflow pada 320–1440px.
 
 ## Identitas
 
