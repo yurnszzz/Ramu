@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ramu — Referensi Desain</title>
+<style>html{color-scheme:light}body{margin:0;background:#f5f2e9;color:#183d3d;font:16px/1.6 system-ui,sans-serif}.board{max-width:1120px;margin:auto;padding:32px 20px 48px}.board h1{font:400 38px/1.2 Georgia,serif;margin:0 0 12px}.intro{max-width:790px;margin:0 0 20px}.swatches{display:flex;gap:18px;flex-wrap:wrap;margin:22px 0 28px}.swatch{display:flex;align-items:center;gap:8px;font-size:13px}.swatch i{display:block;width:28px;height:28px;border:1px solid #66776d55;border-radius:50%}.cursor-interaction{cursor:pointer}.board-footer{margin-top:24px;color:#546763;font-size:14px}@media(max-width:600px){.board{padding:24px 12px}.board h1{font-size:30px}}</style></head><body><div class="board"><h1>Ramu · Jurnal kerja mentor</h1><p class="intro">Referensi komposisi untuk finpro: lembar kertas, teal gelap, tab sederhana, dan detail emas. Ini contoh tampilan Bank Materi dan Ruang Sesi; isi ilustratif belum menjadi materi agama yang ditelaah. Website final tetap mempunyai halaman Panduan &amp; Sumber tersendiri.</p><div class="swatches"><span class="swatch"><i style="background:#073e43"></i>Teal · #073E43</span><span class="swatch"><i style="background:#d9b54a"></i>Emas · #D9B54A</span><span class="swatch"><i style="background:#fffdf7"></i>Kertas · #FFFDF7</span><span class="swatch"><i style="background:#e4ebe2"></i>Sage · #E4EBE2</span></div>
+<div id="ramu-mentor-preview" lang="id">
+  <style>
+    #ramu-mentor-preview{color-scheme:light dark;--rm-bg:light-dark(#eeeade,#102d30);--rm-paper:light-dark(#fffdf7,#1b3d3f);--rm-text:light-dark(#183d3d,#f5f0e4);--rm-muted:light-dark(#546763,#bacbc4);--rm-line:light-dark(#d5d7ca,#456360);--rm-green:#073e43;--rm-gold:#d9b54a;--rm-soft:light-dark(#e4ebe2,#2b4c48);--rm-active:light-dark(#073e43,#d9b54a);--rm-active-text:light-dark(#fffdf7,#173b3e);--rm-shadow:light-dark(#14383418,#00000035);font-family:Arial,Helvetica,sans-serif;color:var(--rm-text);background:var(--rm-bg);border-radius:14px;overflow:hidden;border:1px solid var(--rm-line);font-size:15px;line-height:1.5}
+    #ramu-mentor-preview *{box-sizing:border-box}
+    #ramu-mentor-preview [hidden]{display:none!important}
+    #ramu-mentor-preview button,#ramu-mentor-preview input,#ramu-mentor-preview select,#ramu-mentor-preview textarea{font:inherit}
+    #ramu-mentor-preview button{min-height:44px}
+    #ramu-mentor-preview .rm-header{display:flex;align-items:center;gap:32px;padding:20px 110px 20px 28px;background:var(--rm-green);color:#fffdf7;border-bottom:3px solid var(--rm-gold);flex-wrap:wrap}
+    #ramu-mentor-preview .rm-brand{font:500 32px/1 Georgia,serif;letter-spacing:-1.5px;white-space:nowrap}
+    #ramu-mentor-preview .rm-brand small{display:block;font:400 11px/1.6 Arial,sans-serif;letter-spacing:1.3px;text-transform:uppercase;margin-top:7px;color:#e1dfbc}
+    #ramu-mentor-preview .rm-nav{display:flex;gap:6px;flex-wrap:wrap}
+    #ramu-mentor-preview .rm-nav button{border:1px solid transparent;background:transparent;color:#f4f1e8;border-radius:6px;padding:9px 14px}
+    #ramu-mentor-preview .rm-nav button[aria-pressed="true"]{background:#fffdf719;border-color:#fffdf74d;box-shadow:inset 0 1px 0 #ffffff1c}
+    #ramu-mentor-preview .rm-body{padding:28px}
+    #ramu-mentor-preview .rm-topline{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:21px}
+    #ramu-mentor-preview h2{font:400 29px/1.2 Georgia,serif;letter-spacing:-.6px;margin:0 0 7px;color:var(--rm-text)}
+    #ramu-mentor-preview p{margin:0;color:var(--rm-muted)}
+    #ramu-mentor-preview .rm-small{font-size:12px;color:var(--rm-muted)}
+    #ramu-mentor-preview .rm-stamp{font-size:11px;letter-spacing:.6px;border:1px solid var(--rm-line);padding:5px 9px;border-radius:4px;color:var(--rm-muted)}
+    #ramu-mentor-preview .rm-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(240px,1fr);gap:22px;align-items:start}
+    #ramu-mentor-preview .rm-sheet{position:relative;background:var(--rm-paper);border:1px solid var(--rm-line);border-radius:4px 9px 9px 4px;box-shadow:0 3px 0 var(--rm-bg),0 4px 0 var(--rm-line),0 9px 21px var(--rm-shadow);padding:24px}
+    #ramu-mentor-preview .rm-sheet:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--rm-soft);border-radius:4px 0 0 4px}
+    #ramu-mentor-preview .rm-eyebrow{font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--rm-muted);margin-bottom:8px}
+    #ramu-mentor-preview h3{font:400 24px/1.25 Georgia,serif;letter-spacing:-.3px;margin:0 0 17px;color:var(--rm-text)}
+    #ramu-mentor-preview .rm-duration{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:21px;font-size:13px}
+    #ramu-mentor-preview select{background:var(--rm-bg);color:var(--rm-text);border:1px solid var(--rm-line);border-radius:5px;padding:7px 10px;font-size:16px;min-height:40px}
+    #ramu-mentor-preview .rm-runrow{display:grid;grid-template-columns:22px 1fr auto;align-items:start;gap:12px;padding:15px 0;border-top:1px solid var(--rm-line)}
+    #ramu-mentor-preview .rm-index{font-family:Georgia,serif;color:var(--rm-muted);padding-top:1px}
+    #ramu-mentor-preview .rm-runrow strong{display:block;font-weight:500;margin-bottom:3px}
+    #ramu-mentor-preview .rm-runrow p{font-size:13px;line-height:1.55}
+    #ramu-mentor-preview .rm-minutes{font-size:12px;white-space:nowrap;color:var(--rm-muted);font-variant-numeric:tabular-nums}
+    #ramu-mentor-preview .rm-actions{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:21px}
+    #ramu-mentor-preview .rm-mainbutton{border:1px solid var(--rm-active);background:var(--rm-active);color:var(--rm-active-text);padding:10px 16px;border-radius:6px;box-shadow:inset 0 1px 0 #ffffff30,0 2px 0 var(--rm-shadow);font-weight:500}
+    #ramu-mentor-preview .rm-secondary{border:1px solid var(--rm-line);background:var(--rm-paper);color:var(--rm-text);padding:9px 14px;border-radius:6px;box-shadow:0 2px 0 var(--rm-shadow)}
+    #ramu-mentor-preview .rm-side{display:grid;gap:20px}
+    #ramu-mentor-preview .rm-note{background:var(--rm-soft);border:1px solid var(--rm-line);border-radius:5px;box-shadow:0 3px 9px var(--rm-shadow);padding:20px;position:relative}
+    #ramu-mentor-preview .rm-note:before{content:"";position:absolute;top:0;right:19px;width:16px;height:22px;background:linear-gradient(100deg,#c9a43f,#e3c566,#bd9835);clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%)}
+    #ramu-mentor-preview .rm-note h4{font:400 19px/1.3 Georgia,serif;margin:0 0 13px;padding-right:15px}
+    #ramu-mentor-preview .rm-check{display:flex;align-items:center;gap:9px;padding:8px 0;font-size:13px;min-height:43px}
+    #ramu-mentor-preview .rm-check input{width:17px;height:17px;flex-shrink:0;accent-color:var(--rm-active)}
+    #ramu-mentor-preview .rm-note textarea{display:block;width:100%;resize:vertical;min-height:125px;line-height:1.6;font-size:16px;padding:10px;background:var(--rm-paper);color:var(--rm-text);border:1px solid var(--rm-line);border-radius:4px;box-shadow:inset 0 2px 4px var(--rm-shadow);margin:9px 0}
+    #ramu-mentor-preview textarea::placeholder{color:var(--rm-muted);opacity:1}
+    #ramu-mentor-preview .rm-library{display:grid;gap:16px}
+    #ramu-mentor-preview .rm-topic{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 25px;background:var(--rm-paper);border:1px solid var(--rm-line);border-left:5px solid var(--rm-soft);border-radius:5px;box-shadow:0 3px 8px var(--rm-shadow)}
+    #ramu-mentor-preview .rm-topic h3{font-size:23px;margin:3px 0 6px}
+    #ramu-mentor-preview .rm-topic p{font-size:13px;max-width:560px}
+    #ramu-mentor-preview .rm-topic button{flex-shrink:0}
+    #ramu-mentor-preview .rm-guide{max-width:760px;margin:0 auto;padding:35px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between}
+    #ramu-mentor-preview .rm-guide h3{font-size:30px;margin-top:25px}
+    #ramu-mentor-preview .rm-guide p{font-size:19px;line-height:1.65;color:var(--rm-text)}
+    #ramu-mentor-preview button:disabled{opacity:.45;cursor:default}
+    #ramu-mentor-preview .rm-footer{padding:13px 28px;border-top:1px solid var(--rm-line);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--rm-muted)}
+    @media(max-width:680px){#ramu-mentor-preview .rm-header{padding:20px;gap:18px}#ramu-mentor-preview .rm-brand{font-size:28px}#ramu-mentor-preview .rm-grid{grid-template-columns:1fr}#ramu-mentor-preview .rm-body{padding:20px 16px}#ramu-mentor-preview .rm-sheet{padding:20px}#ramu-mentor-preview .rm-runrow{grid-template-columns:17px 1fr;gap:9px}#ramu-mentor-preview .rm-minutes{grid-column:2}#ramu-mentor-preview .rm-guide{padding:24px;min-height:340px}#ramu-mentor-preview .rm-guide h3{font-size:26px}#ramu-mentor-preview .rm-guide p{font-size:17px}#ramu-mentor-preview .rm-nav button{padding:8px 10px}#ramu-mentor-preview .rm-topic{padding:20px}#ramu-mentor-preview .rm-footer{padding:13px 16px}}
+  </style>
+  <header class="rm-header">
+    <div class="rm-brand">ramu<span aria-hidden="true" style="color:#d9b54a">.</span><small>Ruang kerja mentor</small></div>
+    <nav class="rm-nav" aria-label="Bagian pratinjau">
+      <button type="button" class="cursor-interaction" data-rm-page="bahan" aria-pressed="false">Bank materi</button>
+      <button type="button" class="cursor-interaction" data-rm-page="sesi" aria-pressed="true">Ruang sesi</button>
+    </nav>
+  </header>
+  <main class="rm-body">
+    <section data-rm-panel="bahan" hidden aria-label="Bank materi">
+      <div class="rm-topline"><div><h2>Bahan untuk pertemuan berikutnya.</h2><p>Bahasan kontekstual, tema dasar, dan seri bacaan.</p></div><span class="rm-stamp">Contoh isi</span></div>
+      <div class="rm-library">
+        <article class="rm-topic"><div><div class="rm-eyebrow">Kontekstual · Adab digital</div><h3>Sebelum ikut membagikan</h3><p>Membuka diskusi tentang sumber informasi dan kebiasaan meneruskan tangkapan layar.</p></div><button class="rm-secondary cursor-interaction" type="button" data-rm-topic="0">Susun sesi</button></article>
+        <article class="rm-topic"><div><div class="rm-eyebrow">Tema dasar · Kehidupan kampus</div><h3>Janji kecil, tanggung jawab besar</h3><p>Bahan diskusi tentang komitmen dalam tugas kelompok dan organisasi.</p></div><button class="rm-secondary cursor-interaction" type="button" data-rm-topic="1">Susun sesi</button></article>
+        <article class="rm-topic"><div><div class="rm-eyebrow">Rencana seri Arba’in · Niat</div><h3>Untuk apa kita sibuk?</h3><p>Pertanyaan refleksi untuk menemani bacaan dan syarah yang dipilih mentor.</p></div><button class="rm-secondary cursor-interaction" type="button" data-rm-topic="2">Susun sesi</button></article>
+      </div>
+    </section>
+    <section data-rm-panel="sesi" aria-label="Ruang sesi">
+      <div class="rm-topline"><div><h2>Siapkan percakapan yang berarti.</h2><p>Satu lembar untuk alur sesi dan tindak lanjut.</p></div><span class="rm-stamp">Draf sesi</span></div>
+      <div class="rm-grid">
+        <article class="rm-sheet">
+          <div class="rm-eyebrow">Lembar persiapan</div><h3 id="rm-topic-title">Sebelum ikut membagikan</h3>
+          <div class="rm-duration"><label for="rm-duration">Alokasi waktu</label><select id="rm-duration"><option value="20">20 menit</option><option value="30" selected>30 menit</option><option value="45">45 menit</option></select></div>
+          <div id="rm-runrows" aria-live="polite">
+            <div class="rm-runrow"><span class="rm-index">1</span><div><strong>Pembuka</strong><p data-rm-text="0">Pernah menerima kabar yang terasa meyakinkan, tetapi sumbernya tidak jelas?</p></div><span class="rm-minutes" data-rm-min="0">4 menit</span></div>
+            <div class="rm-runrow"><span class="rm-index">2</span><div><strong>Bahasan utama</strong><p data-rm-text="1">Telusuri sumber, bedakan fakta dan dugaan, lalu buka rujukan yang sudah ditinjau mentor.</p></div><span class="rm-minutes" data-rm-min="1">11 menit</span></div>
+            <div class="rm-runrow"><span class="rm-index">3</span><div><strong>Diskusi</strong><p data-rm-text="2">Apa yang perlu kita pastikan sebelum meneruskan tangkapan layar?</p></div><span class="rm-minutes" data-rm-min="2">11 menit</span></div>
+            <div class="rm-runrow"><span class="rm-index">4</span><div><strong>Tindak lanjut</strong><p data-rm-text="3">Pilih satu kebiasaan memeriksa informasi untuk dicoba pekan ini.</p></div><span class="rm-minutes" data-rm-min="3">4 menit</span></div>
+          </div>
+          <div class="rm-actions"><span class="rm-small">Rujukan perlu ditinjau mentor</span><button type="button" id="rm-open-guide" class="rm-mainbutton cursor-interaction">Buka mode pandu</button></div>
+        </article>
+        <aside class="rm-side" aria-label="Persiapan dan catatan">
+          <div class="rm-note"><h4>Sebelum mulai</h4><label class="rm-check"><input type="checkbox" data-rm-check> Tujuan sesi sudah jelas</label><label class="rm-check"><input type="checkbox" data-rm-check> Rujukan sudah diperiksa</label><label class="rm-check"><input type="checkbox" data-rm-check> Pertanyaan diskusi siap</label><p id="rm-check-count" class="rm-small" aria-live="polite">0 dari 3 persiapan selesai</p></div>
+          <div class="rm-note"><h4>Catatan mentor</h4><label for="rm-note-input" class="rm-small">Pertanyaan dan tindak lanjut</label><textarea id="rm-note-input" placeholder="Hal yang ingin dibahas kembali…"></textarea><p class="rm-small">Sementara · belum tersimpan</p></div>
+        </aside>
+      </div>
+    </section>
+    <section data-rm-panel="pandu" hidden aria-label="Mode pandu">
+      <div class="rm-topline"><button type="button" id="rm-close-guide" class="rm-secondary cursor-interaction">Kembali ke sesi</button><span class="rm-stamp">Mode pandu</span></div>
+      <article class="rm-sheet rm-guide"><div aria-live="polite"><div class="rm-eyebrow" id="rm-guide-topic">Sebelum ikut membagikan</div><h3 id="rm-guide-title">Pembuka</h3><p id="rm-guide-text">Pernah menerima kabar yang terasa meyakinkan, tetapi sumbernya tidak jelas?</p></div><div class="rm-actions"><span id="rm-guide-position" class="rm-small" aria-live="polite">1 dari 4 bagian</span><div style="display:flex;gap:9px;flex-wrap:wrap"><button type="button" id="rm-prev" class="rm-secondary cursor-interaction" disabled>Sebelumnya</button><button type="button" id="rm-next" class="rm-mainbutton cursor-interaction">Berikutnya</button></div></div></article>
+    </section>
+  </main>
+  <footer class="rm-footer"><span>Konsep visual Ramu · isi ilustratif</span><span>Untuk mentor lintas lembaga dakwah</span></footer>
+  <script>
+    (function(){
+      const root=document.getElementById('ramu-mentor-preview');
+      const topics=[
+        {title:'Sebelum ikut membagikan',steps:['Pernah menerima kabar yang terasa meyakinkan, tetapi sumbernya tidak jelas?','Telusuri sumber, bedakan fakta dan dugaan, lalu buka rujukan yang sudah ditinjau mentor.','Apa yang perlu kita pastikan sebelum meneruskan tangkapan layar?','Pilih satu kebiasaan memeriksa informasi untuk dicoba pekan ini.']},
+        {title:'Janji kecil, tanggung jawab besar',steps:['Kapan terakhir kali sebuah janji kecil terasa besar bagi orang lain?','Petakan tanggung jawab dalam tugas kelompok. Hubungkan dengan rujukan yang sudah dipilih mentor.','Bagaimana menyampaikan kendala sebelum janji terlewat?','Pilih satu komitmen yang akan dituntaskan dan tentukan langkah pertamanya.']},
+        {title:'Untuk apa kita sibuk?',steps:['Apa yang paling banyak mengambil waktu kita belakangan ini?','Baca hadis dan syarah tentang niat yang sudah diperiksa mentor. Catat konteks pembahasannya.','Apa yang ingin kita capai melalui kesibukan di kampus?','Pilih satu aktivitas untuk ditinjau kembali tujuan dan caranya.']}
+      ];
+      const labels=['Pembuka','Bahasan utama','Diskusi','Tindak lanjut'];
+      const times={20:[3,7,7,3],30:[4,11,11,4],45:[5,17,17,6]};
+      let topicIndex=0;
+      let guideIndex=0;
+      function showPage(name){
+        root.querySelectorAll('[data-rm-panel]').forEach(function(panel){panel.hidden=panel.dataset.rmPanel!==name;});
+        root.querySelectorAll('[data-rm-page]').forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.rmPage===(name==='pandu'?'sesi':name)));});
+      }
+      function updateTopic(){
+        root.querySelector('#rm-topic-title').innerText=topics[topicIndex].title;
+        root.querySelectorAll('[data-rm-text]').forEach(function(el){el.innerText=topics[topicIndex].steps[Number(el.dataset.rmText)];});
+      }
+      function updateGuide(){
+        root.querySelector('#rm-guide-topic').innerText=topics[topicIndex].title;
+        root.querySelector('#rm-guide-title').innerText=labels[guideIndex];
+        root.querySelector('#rm-guide-text').innerText=topics[topicIndex].steps[guideIndex];
+        root.querySelector('#rm-guide-position').innerText=(guideIndex+1)+' dari 4 bagian';
+        root.querySelector('#rm-prev').disabled=guideIndex===0;
+        root.querySelector('#rm-next').disabled=guideIndex===3;
+      }
+      root.querySelectorAll('[data-rm-page]').forEach(function(button){button.addEventListener('click',function(){showPage(button.dataset.rmPage);});});
+      root.querySelectorAll('[data-rm-topic]').forEach(function(button){button.addEventListener('click',function(){topicIndex=Number(button.dataset.rmTopic);updateTopic();showPage('sesi');});});
+      root.querySelector('#rm-duration').addEventListener('change',function(event){const list=times[event.target.value];root.querySelectorAll('[data-rm-min]').forEach(function(el){el.innerText=list[Number(el.dataset.rmMin)]+' menit';});});
+      root.querySelectorAll('[data-rm-check]').forEach(function(box){box.addEventListener('change',function(){const count=root.querySelectorAll('[data-rm-check]:checked').length;root.querySelector('#rm-check-count').innerText=count+' dari 3 persiapan selesai';});});
+      root.querySelector('#rm-open-guide').addEventListener('click',function(){guideIndex=0;updateGuide();showPage('pandu');});
+      root.querySelector('#rm-close-guide').addEventListener('click',function(){showPage('sesi');});
+      root.querySelector('#rm-prev').addEventListener('click',function(){if(guideIndex>0){guideIndex--;updateGuide();}});
+      root.querySelector('#rm-next').addEventListener('click',function(){if(guideIndex<3){guideIndex++;updateGuide();}});
+    })();
+  </script>
+</div>
+<style>#ramu-mentor-preview{color-scheme:light}</style><p class="board-footer">Arah visual ditetapkan dalam docs/DESIGN.md. File ini hanya referensi; jangan menggunakannya sebagai pengganti struktur tiga halaman atau seluruh implementasi proyek. Wordmark yang terlihat adalah teks sementara, bukan logo final.</p></div></body></html>

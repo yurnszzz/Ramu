@@ -1,0 +1,30 @@
+# Local context, design tools, and review artifacts
+.agents/
+.agent/
+.claude/
+.codex/
+.local/
+.taste-skill/
+.impeccable/
+node_modules/
+__pycache__/
+*.pyc
+
+# Credentials and editor/system files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# Original reference package (organized copies live in planning/)
+/Ramu-*.md
+/Ramu-Design-Board.html
+/ramu-*.svg
+/favicon.svg
+/scfe_basic.md
+/Instruksi Final Project*.md
+/*.pdf
