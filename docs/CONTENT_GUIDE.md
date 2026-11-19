@@ -1,8 +1,8 @@
 # Panduan konten
 
-Gunakan bahasa Indonesia sederhana untuk mentor lintas komunitas. T01 hanya menjelaskan halaman, alur, dan prinsip kurasi; belum menerbitkan paket materi agama.
+Gunakan bahasa Indonesia sederhana untuk mentor lintas komunitas. Koleksi awal berisi enam bahan diskusi. Setiap panel detail menautkan ayat atau hadis yang digunakan.
 
-Pada T02, setiap paket perlu ID, judul, kategori, ringkasan, tujuan, pembuka, pokok bahasan, pertanyaan diskusi, tindak lanjut, dan sumber. Target minimal enam paket: dua kontekstual, dua tema dasar, dan dua rujukan Arba’in.
+Simpan paket di [materi.js](../assets/js/materi.js). Setiap paket memiliki ID unik, judul, kategori, ringkasan, tujuan, pembuka, pokok bahasan, pertanyaan diskusi, tindak lanjut, dan sumber. Saat mengganti rujukan, cocokkan juga tautan di bagian [Daftar sumber](../panduan.html#sumber).
 
 - Periksa sumber primer atau rujukan yang dapat dipertanggungjawabkan sebelum menulis materi.
 - Cantumkan tautan sumber dan bagian yang dirujuk; jangan mengarang dalil atau kutipan.

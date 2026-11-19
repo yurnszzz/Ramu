@@ -11,14 +11,14 @@
 
 Ramu adalah ruang kerja sederhana untuk mentor pembinaan Islam lintas komunitas: menyiapkan bahan, menyusun pertemuan, dan mendampingi diskusi dengan lebih terarah. Proyek ini dikerjakan sebagai final project **Frontend Basic KSM Veterantech**.
 
-**Versi T01 membangun fondasi tampilan.** Tiga halaman sudah disiapkan dengan navigasi antardokumen dan layout responsif. Pencarian materi, penyusun sesi, mode pandu, serta catatan belum tersedia pada tahap ini.
+**Bank Materi kini berisi enam paket diskusi.** Cari kata dari judul atau ringkasan, pilih kategori, lalu buka paket untuk membaca pertanyaan diskusi dan sumbernya. Contohnya, cari `tabayun` untuk menemukan latihan memeriksa kabar di grup kelas.
 
 ## Halaman
 
 | Halaman | Peran dalam Ramu |
 | --- | --- |
 | [Bank Materi](index.html) | Tempat memilih bahan pembinaan. |
-| [Ruang Sesi](sesi.html) | Ruang untuk menyiapkan dan memandu pertemuan. |
+| [Ruang Sesi](sesi.html) | Kerangka empat bagian pertemuan. Editor dan mode pandu direncanakan pada tahap selanjutnya. |
 | [Panduan & Sumber](panduan.html) | Penjelasan cara pakai, batas draf, dan prinsip kurasi. |
 
 Tampilan memakai teal gelap, kertas krem, sage, serta aksen emas. Bayangan tipis dan lapisan kertas memberi kesan meja kerja yang tenang. Wordmark teks digunakan sambil menunggu persetujuan logo final.
@@ -32,7 +32,7 @@ git clone https://github.com/yurnszzz/Ramu.git
 cd Ramu
 ```
 
-Selama [PR T01](https://github.com/yurnszzz/Ramu/pull/1) masih terbuka, jalankan `git switch feat/t01-foundation` agar halaman T01 tersedia. Sesudah PR digabung, halaman bisa dibuka dari `main`.
+Untuk meninjau Bank Materi sebelum T02 masuk ke `main`, jalankan `git switch feat/t02-bank-materi` setelah clone.
 
 Buka `index.html` langsung di browser. Untuk menjalankannya melalui HTTP lokal, gunakan Python dari folder proyek.
 
@@ -46,7 +46,7 @@ Buka [localhost:8000](http://localhost:8000). Hentikan server dengan `Ctrl+C`. N
 
 - **HTML** untuk struktur semantik dan navigasi tiga halaman.
 - **CSS biasa** untuk warna, tipografi, flex/grid, state fokus, dan media query.
-- **JavaScript native** untuk interaksi DOM pada tahap berikutnya.
+- **JavaScript native** untuk menyaring array materi, memperbarui jumlah hasil, serta membuka dan menutup detail melalui DOM.
 
 Ramu mengikuti materi FE Basic tanpa framework atau dependensi runtime. Tidak ada backend, akun, database, API data, penyimpanan browser, timer, atau notifikasi.
 
@@ -60,7 +60,8 @@ Ramu/
 ├── sesi.html           # Ruang Sesi
 ├── panduan.html        # Panduan & Sumber
 ├── assets/
-│   └── css/            # Style bersama untuk ketiga halaman
+│   ├── css/            # Style bersama untuk ketiga halaman
+│   └── js/             # Koleksi materi dan interaksi Bank Materi
 ├── docs/               # Desain, batas materi, kurasi, dan hasil QA
 │   └── assets/         # Aset dokumentasi README
 ├── planning/           # Kebutuhan produk dan tahap pengerjaan
@@ -68,14 +69,14 @@ Ramu/
 └── LICENSE
 ```
 
-Untuk menelusuri kode, mulai dari navigasi di `index.html`, kemudian lihat aturan layout bersama di [assets/css/style.css](assets/css/style.css).
+Koleksi dan sumber berada di [materi.js](assets/js/materi.js). Fungsi `tampilkanHasil()` pada [bank-materi.js](assets/js/bank-materi.js) membaca kedua filter dan menggambar ulang daftar. Semua bahan dimuat dari file lokal. Tautan rujukan dapat dibuka saat tersedia koneksi internet.
 
 ## Tahap pengerjaan
 
 | Tahap | Cakupan | Status |
 | --- | --- | --- |
-| T01 | Tiga halaman, navigasi, fondasi CSS, dan layout responsif | Siap direview |
-| T02 | Bank Materi: konten bersumber, pencarian, filter, dan detail | Direncanakan |
+| T01 | Tiga halaman, navigasi, fondasi CSS, dan layout responsif | Digabung ke `main` |
+| T02 | Bank Materi: konten bersumber, pencarian, filter, dan detail | Siap direview |
 | T03 | Penyusun sesi, template, durasi, dan preview | Direncanakan |
 | T04 | Mode pandu, catatan, dan evaluasi sementara | Direncanakan |
 | T05 | Pemeriksaan akhir, dokumentasi, dan pembersihan proyek | Direncanakan |

@@ -28,7 +28,7 @@ body {
 
 a { color: var(--teal); text-underline-offset: 0.25em; }
 a:hover { text-decoration-thickness: 2px; }
-a:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 4px; }
 
 h1, h2, h3, p { margin: 0; }
 h1, h2, h3 { line-height: 1.2; }
@@ -94,13 +94,6 @@ main { padding-top: 32px; padding-bottom: 48px; }
 }
 .paper-heading { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
 .paper-heading p { margin-top: 12px; color: var(--muted); }
-.collection-note { display: flex; gap: 16px; align-items: flex-start; padding: 24px 0; }
-.collection-note svg { flex: 0 0 32px; margin-top: 4px; color: var(--teal); }
-.collection-note p { margin-top: 8px; color: var(--muted); }
-.category-list { display: grid; gap: 0; }
-.category { padding: 20px 0; border-top: 1px solid var(--line); }
-.category p { margin-top: 8px; color: var(--muted); }
-.paper-footer { margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line); }
 .text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
 
 .side-note { position: relative; padding: 32px 24px 24px; background: var(--sage); border-radius: 6px; }
@@ -126,6 +119,70 @@ main { padding-top: 32px; padding-bottom: 48px; }
 .button-link:hover { background: var(--teal-hover); }
 .side-note .button-link { margin-top: 24px; }
 
+/* Bank Materi: catatan filter dan lembar indeks menggunakan material yang sama dengan panduan. */
+#filter-materi { display: grid; gap: 16px; margin-top: 16px; }
+.filter-field { min-width: 0; }
+.filter-field label { display: block; margin-bottom: 4px; font-weight: 700; }
+.filter-field input,
+.filter-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 8px 10px;
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  box-shadow: inset 0 2px 3px rgba(7, 62, 67, 0.08);
+}
+.filter-field input::placeholder { color: var(--muted); opacity: 1; }
+.bank-button,
+.detail-link {
+  min-height: 44px;
+  padding: 6px 14px;
+  border: 1px solid var(--teal);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--teal);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.bank-button:hover, .detail-link:hover { background: var(--sage); }
+#filter-materi .bank-button { justify-self: start; background: var(--paper); }
+#filter-materi .bank-button:hover { background: var(--teal); color: var(--paper); }
+.bank-sheets { display: grid; min-width: 0; gap: 28px; }
+.index-heading { padding-right: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.index-heading p { margin-top: 6px; color: var(--muted); }
+/* Penanda berbentuk pita pada ujung lembar koleksi. */
+.bank-index::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 24px;
+  border: 8px solid var(--gold);
+  border-top-width: 20px;
+  border-bottom-color: transparent;
+}
+.kartu-materi { padding: 22px 0; overflow-wrap: anywhere; }
+.kartu-materi + .kartu-materi { border-top: 1px solid var(--line); }
+.kartu-materi:last-child { padding-bottom: 0; }
+.kartu-materi .kategori-label { color: var(--muted); font-size: 0.875rem; font-weight: 700; }
+.kartu-materi h3 { margin: 4px 0 8px; font: 1.4rem/1.3 Georgia, 'Times New Roman', serif; }
+.kartu-materi .detail-link { margin-top: 12px; }
+.detail-link[aria-expanded='true'] { background: var(--teal); color: var(--paper); }
+#kosong-materi { padding-top: 24px; }
+#kosong-materi p { margin: 8px 0 16px; }
+.detail-heading { display: flex; flex-wrap: wrap; align-items: start; gap: 12px 20px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.detail-heading h2 { flex: 1 1 15rem; scroll-margin-top: 20px; }
+.detail-sheet { overflow-wrap: anywhere; }
+#isi-detail > p { margin-top: 8px; }
+#isi-detail h3 { margin: 24px 0 8px; }
+#isi-detail ul { margin-top: 8px; }
+#isi-detail li + li { margin-top: 6px; }
+#isi-detail a { display: inline-block; min-height: 44px; padding: 8px 0; }
+.detail-footer { margin-top: 16px; padding-top: 20px; border-top: 1px solid var(--line); }
+
 .guide-section + .guide-section { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
 .guide-section { scroll-margin-top: 24px; }
 .guide-section h2 { margin-bottom: 16px; }
@@ -142,6 +199,11 @@ main { padding-top: 32px; padding-bottom: 48px; }
 .footer-inner { display: flex; flex-direction: column; gap: 8px; padding-top: 24px; padding-bottom: 28px; color: var(--muted); font-size: 0.875rem; }
 .footer-inner a { display: inline-flex; align-items: center; min-height: 44px; }
 
+@media (min-width: 360px) and (max-width: 639px) {
+  #filter-materi { grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 12px; }
+  #filter-materi .filter-field:first-child { grid-column: 1 / -1; }
+}
+
 @media (min-width: 640px) {
   .container { width: calc(100% - 64px); }
   main { padding-top: 40px; padding-bottom: 56px; }
@@ -151,9 +213,13 @@ main { padding-top: 32px; padding-bottom: 48px; }
   .site-nav li { flex: initial; }
   .site-nav a { padding: 12px 16px; font-size: 1rem; white-space: nowrap; }
   .paper { padding: 32px; }
-  .category { display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: baseline; }
-  .category p { margin: 0; }
+  .index-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding-right: 24px; }
+  .index-heading p { margin: 0; }
   .footer-inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 24px; }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+  #filter-materi { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto; align-items: end; }
 }
 
 @media (min-width: 960px) {
@@ -164,6 +230,8 @@ main { padding-top: 32px; padding-bottom: 48px; }
   .workspace { grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; }
   .guide-workspace .paper { grid-column: 1; grid-row: 1; }
   .guide-workspace .side-note { grid-column: 2; grid-row: 1; }
+  .bank-workspace .bank-sheets { grid-column: 1; grid-row: 1; }
+  .bank-workspace .filter-note { grid-column: 2; grid-row: 1; }
   .paper { padding: 36px; }
   .next-step { flex-direction: row; align-items: center; justify-content: space-between; gap: 24px; }
 }

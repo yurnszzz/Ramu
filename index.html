@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bank Materi Ramu, tempat menyiapkan bahan pembinaan Islam untuk pertemuan yang terarah.">
+  <meta name="description" content="Cari bahan pembinaan Islam berdasarkan tema. Setiap paket memuat tujuan, pertanyaan diskusi, tindak lanjut, dan rujukan.">
   <title>Bank Materi — Ramu</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/materi.js"></script>
+  <script defer src="assets/js/bank-materi.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
@@ -30,62 +32,65 @@
     <div class="page-heading">
       <div>
         <h1>Bank Materi</h1>
-        <p>Bahan pembinaan untuk membuka percakapan, menumbuhkan pemahaman, dan menyusun langkah bersama.</p>
+        <p>Pilih tema pertemuan, baca rujukannya, dan siapkan pertanyaan diskusi.</p>
       </div>
-      <span class="status">Koleksi dalam persiapan</span>
     </div>
 
-    <div class="workspace">
-      <section class="paper" aria-labelledby="koleksi-title">
-        <div class="paper-heading">
-          <h2 id="koleksi-title">Titik mula sebuah pertemuan.</h2>
-          <p>Materi akan dikelompokkan menurut kebutuhan pembinaan. Mulai dari hal yang paling dekat dengan peserta.</p>
-        </div>
-        <div class="collection-note">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M16 8C12 5 7 5 3 6v20c4-1 9-1 13 2 4-3 9-3 13-2V6c-4-1-9-1-13 2Zm0 0v20"/>
-            <path d="M7 11c2-.3 4 0 6 1m-6 4c2-.3 4 0 6 1m6-5c2-1 4-1.3 6-1m-6 6c2-1 4-1.3 6-1"/>
-          </svg>
-          <div>
-            <h3>Koleksi sedang disiapkan</h3>
-            <p>Belum ada paket materi yang diterbitkan. Pencarian, filter, dan detail akan tersedia setelah koleksi bersumber ditambahkan.</p>
-          </div>
-        </div>
-        <div class="category-list" aria-label="Rencana kelompok materi">
-          <div class="category">
-            <h3>Kontekstual</h3>
-            <p>Tema yang dekat dengan keseharian mahasiswa dan dinamika pertemanan.</p>
-          </div>
-          <div class="category">
-            <h3>Tema dasar</h3>
-            <p>Bahan pengantar untuk membangun pemahaman secara bertahap.</p>
-          </div>
-          <div class="category">
-            <h3>Rujukan Arba’in</h3>
-            <p>Bahan diskusi dengan rujukan hadis Arba’in yang dapat ditelusuri.</p>
-          </div>
-        </div>
-        <div class="paper-footer">
-          <a class="text-link" href="panduan.html#kurasi">Baca panduan kurasi</a>
-        </div>
-      </section>
+    <noscript>
+      <div class="notice">
+        <p>Aktifkan JavaScript untuk mencari dan membaca paket materi.</p>
+        <a class="text-link" href="panduan.html#sumber">Lihat daftar sumber</a>
+      </div>
+    </noscript>
 
-      <aside class="side-note" aria-labelledby="persiapan-title">
-        <h2 id="persiapan-title">Sebelum memilih materi</h2>
-        <p>Satu kebutuhan yang jelas membantu pertemuan tetap terarah.</p>
-        <ol>
-          <li>Kenali hal yang sedang dihadapi peserta.</li>
-          <li>Tentukan satu tujuan yang ingin dicapai bersama.</li>
-          <li>Periksa rujukan sebelum membawakan materi.</li>
-        </ol>
-        <p class="note-caption">Bahan membantu persiapan. Ruang untuk mendengar tetap perlu disediakan.</p>
-        <a class="text-link" href="panduan.html">Kenali cara kerja Ramu</a>
-      </aside>
-    </div>
+    <div id="bank-interaktif" hidden>
+      <div class="workspace bank-workspace">
+        <aside class="side-note filter-note" aria-labelledby="judul-filter">
+          <h2 id="judul-filter">Cari materi</h2>
+          <form id="filter-materi">
+            <div class="filter-field">
+              <label for="cari-materi">Kata kunci</label>
+              <input id="cari-materi" type="search" placeholder="Cari judul atau ringkasan">
+            </div>
+            <div class="filter-field">
+              <label for="kategori-materi">Kategori</label>
+              <select id="kategori-materi">
+                <option value="">Semua kategori</option>
+                <option value="Kontekstual">Kontekstual</option>
+                <option value="Tema dasar">Tema dasar</option>
+                <option value="Rujukan Arba’in">Rujukan Arba’in</option>
+              </select>
+            </div>
+            <button class="bank-button" type="reset">Reset filter</button>
+          </form>
+        </aside>
 
-    <div class="next-step">
-      <p>Kenali alur pertemuan sebelum mulai meramu.</p>
-      <a class="text-link" href="sesi.html">Buka Ruang Sesi</a>
+        <div class="bank-sheets">
+          <section class="paper detail-sheet" id="detail-materi" aria-labelledby="judul-detail" hidden>
+            <div class="detail-heading">
+              <h2 id="judul-detail" tabindex="-1"></h2>
+              <button class="bank-button" id="tutup-detail" type="button">Tutup detail</button>
+            </div>
+            <div id="isi-detail"></div>
+            <div class="detail-footer">
+              <a class="button-link" href="sesi.html">Buka Ruang Sesi</a>
+            </div>
+          </section>
+
+          <section class="paper bank-index" aria-labelledby="judul-koleksi">
+            <div class="index-heading">
+              <h2 id="judul-koleksi">Koleksi materi</h2>
+              <p id="jumlah-materi" role="status" aria-atomic="true"></p>
+            </div>
+            <div id="daftar-materi"></div>
+            <div id="kosong-materi" hidden>
+              <h3>Belum ada materi yang cocok</h3>
+              <p>Coba kata kunci lain atau tampilkan kembali semua kategori.</p>
+              <button class="bank-button" id="reset-kosong" type="reset" form="filter-materi">Tampilkan semua materi</button>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   </main>
 
