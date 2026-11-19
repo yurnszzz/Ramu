@@ -25,17 +25,19 @@ Tampilan memakai teal gelap, kertas krem, sage, serta aksen emas. Bayangan tipis
 
 ## Mulai lokal
 
-Unduh atau clone repository, lalu buka `index.html` langsung di browser. Tidak ada instalasi dependensi atau proses build.
+Clone repository, lalu masuk ke folder proyek.
 
 ```bash
 git clone https://github.com/yurnszzz/Ramu.git
 cd Ramu
 ```
 
-Jika ingin memakai server lokal dan Python tersedia:
+Selama [PR T01](https://github.com/yurnszzz/Ramu/pull/1) masih terbuka, jalankan `git switch feat/t01-foundation` agar halaman T01 tersedia. Sesudah PR digabung, halaman bisa dibuka dari `main`.
+
+Buka `index.html` langsung di browser. Untuk menjalankannya melalui HTTP lokal, gunakan Python dari folder proyek.
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
 Buka [localhost:8000](http://localhost:8000). Hentikan server dengan `Ctrl+C`. Nama perintah Python dapat berupa `python` atau `py -3`, mengikuti instalasi di perangkat.
@@ -61,14 +63,12 @@ Ramu/
 │   └── css/            # Style bersama untuk ketiga halaman
 ├── docs/               # Desain, batas materi, kurasi, dan hasil QA
 │   └── assets/         # Aset dokumentasi README
-├── planning/           # PRD, task, prompt, dan referensi visual
-├── scripts/            # Peralatan bantu pengembangan
-├── AGENTS.md           # Aturan kerja repository
+├── planning/           # Kebutuhan produk dan tahap pengerjaan
 ├── README.md
 └── LICENSE
 ```
 
-File kelas asli, salinan skill desain, kredensial, serta hasil pemeriksaan sementara tetap lokal dan diabaikan Git. PRD dipertahankan selama pengerjaan hingga finalisasi.
+Untuk menelusuri kode, mulai dari navigasi di `index.html`, kemudian lihat aturan layout bersama di [assets/css/style.css](assets/css/style.css).
 
 ## Tahap pengerjaan
 

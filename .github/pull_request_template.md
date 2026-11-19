@@ -11,4 +11,4 @@ Catat pemeriksaan yang benar-benar dijalankan, hasil, dan batas yang belum diuji
 - [ ] Scope sesuai tahap dan batas FE Basic.
 - [ ] Navigasi, keyboard, dan layout responsif diperiksa.
 - [ ] Dokumentasi mencerminkan fitur yang sudah tersedia.
-- [ ] Diff tidak memuat skill, file kelas asli, kredensial, atau artefak lokal.
+- [ ] Seluruh file pada diff memang diperlukan oleh proyek dan boleh diterbitkan.

@@ -19,7 +19,7 @@ Tanggal: 16 November 2026. Cakupan: fondasi tiga halaman, CSS bersama, navigasi,
 | Kontras pasangan warna teks utama dan pendukung | 4,94:1 sampai 11,64:1; seluruh pasangan yang diuji di atas 4,5:1 |
 | Banner SVG README | XML valid, render diperiksa; animasi sekali jalan selesai, reduced motion menonaktifkan animasi |
 | Batas FE Basic/T01 | HTML/CSS native, tanpa script runtime, kontrol palsu, framework, API, atau storage |
-| Git | `diff --check` dan `scripts/design_skills.py check-git` lulus; skill dan artefak lokal tidak terlacak |
+| Git | Diff bebas kesalahan whitespace. Daftar file yang dipublikasikan diperiksa terpisah dari berkas kerja lokal. |
 
 ## Metode dan review
 
@@ -28,6 +28,8 @@ Pemeriksaan memakai Chrome headless yang sudah tersedia di Windows, melalui HTTP
 Screenshot desktop dan mobile juga diperiksa secara visual. Review kode terpisah memeriksa semantik, batas tahap, tautan, dan keterbacaan. Temuan daftar isi panduan yang terlalu bawah pada ponsel sudah diperbaiki: daftar isi sekarang mendahului artikel pada mobile dan menjadi sidebar kanan pada desktop. Navigasi desktop diperbaiki agar label tampil satu baris. Perubahan tersebut sudah diuji ulang.
 
 Pemeriksa desain Impeccable dijalankan sekali. Ia memberi peringatan Arial dan latar krem; keduanya dipertahankan karena ditetapkan board proyek. Peringatan padding pada baris terakhir kerangka sesi diperiksa: border terakhir memang dihapus, dengan padding lembar luar tetap tersedia. Peringatan tersebut tidak dilaporkan sebagai lint yang lulus tanpa catatan.
+
+Pada 19 November 2026, setelah perapian dokumentasi, seluruh 46 rujukan lokal pada HTML dan Markdown diperiksa terhadap 17 file yang tercatat di indeks Git. Tujuan tautan, aset, dan fragment ditemukan. Tiga halaman, stylesheet, banner, dan lisensi identik dengan versi yang diperiksa pada 16 November.
 
 ## Batas pemeriksaan
 

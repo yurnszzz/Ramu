@@ -1,7 +1,5 @@
 # Desain Ramu
 
-Acuan visual: [design board](../planning/DESIGN_BOARD.html). Board adalah ilustrasi, bukan implementasi produk atau materi agama yang telah direview.
-
 ## Arah
 
 Ruang kerja mentor yang tenang dan mudah dipindai. Gunakan material kertas secara halus: latar hangat, lembar krem, bayangan lembut, catatan sage, dan penanda emas kecil. Halaman pertama langsung membuka Bank Materi tanpa landing page pemasaran terpisah.

@@ -1,6 +1,6 @@
 # Tahap pengerjaan Ramu
 
-Daftar ini disusun dari PRD dan prompt yang tersedia karena paket awal belum memuat TASKS.md. Satu tahap per branch dan PR; tahap berikutnya hanya dimulai setelah PR sebelumnya merge.
+Setiap tahap memakai satu branch dan satu PR. Mulai tahap berikutnya setelah PR sebelumnya digabung ke `main`.
 
 | Tahap | Cakupan | Status |
 | --- | --- | --- |
@@ -14,11 +14,11 @@ Daftar ini disusun dari PRD dan prompt yang tersedia karena paket awal belum mem
 
 - Tiga dokumen HTML nyata: Bank Materi, Ruang Sesi, Panduan & Sumber.
 - Header, main, footer semantik; navigasi antarahalaman dan halaman aktif.
-- CSS bersama, token material sesuai board, wordmark sementara, fokus keyboard.
+- CSS bersama mengikuti [panduan desain](../docs/DESIGN.md), dengan wordmark sementara dan fokus keyboard yang terlihat.
 - Layout 360/768/1440px dan sanity check 320px tanpa overflow.
 - Struktur terkelompok, README sesuai implementasi, banner animasi ringan, dan MIT.
 - Fitur T02–T04 belum diimplementasikan; keterangan status jujur dan tidak ada kontrol palsu.
-- Pemeriksaan dicatat di `docs/QA.md`; file skill dan artefak lokal tidak terlacak.
+- Catat hasil pemeriksaan di [QA](../docs/QA.md) dan periksa daftar file sebelum push.
 
 ## T02 — Bank Materi
 
@@ -34,4 +34,4 @@ Empat langkah dari input terbaru; sebelumnya/berikutnya dibatasi rentang; kembal
 
 ## T05 — Finalisasi
 
-Uji acceptance akhir PRD, responsive dan keyboard, verifikasi rujukan, perbarui panduan/README dengan fakta produk. Hapus PRD sementara setelah rangkumannya lengkap. Matikan pemasangan ulang skill dan bersihkan hanya salinan milik Ramu setelah memeriksa path. Audit file Git dan link dokumentasi. Pengumpulan repository publik; deployment adalah tambahan, bukan syarat yang dinyatakan.
+Uji kriteria penerimaan pada PRD, layout responsif, navigasi keyboard, dan tautan sumber. Perbarui panduan dan README sesuai fitur yang selesai. Hapus PRD sementara setelah rangkumannya lengkap. Rapikan file kerja milik proyek, periksa isi Git dan tautan dokumentasi, lalu kumpulkan tautan repository publik melalui Dignition.
