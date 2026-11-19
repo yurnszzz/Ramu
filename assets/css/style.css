@@ -1,0 +1,173 @@
+/* Warna dan material mengikuti papan desain Ramu. */
+:root {
+  --teal: #073e43;
+  --teal-hover: #0d5056;
+  --gold: #d9b54a;
+  --paper: #fffdf7;
+  --sage: #e4ebe2;
+  --background: #eeeade;
+  --ink: #183d3d;
+  --muted: #546763;
+  --line: #d5d7ca;
+  --shadow: 0 8px 24px rgba(7, 62, 67, 0.06);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+::selection { background: var(--gold); color: var(--teal); }
+
+a { color: var(--teal); text-underline-offset: 0.25em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }
+
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.2; }
+h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
+h1 { font-size: 2.25rem; letter-spacing: -0.025em; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.0625rem; }
+ol, ul { margin: 0; padding-left: 1.4rem; }
+
+.container { width: calc(100% - 32px); max-width: 1160px; margin: 0 auto; }
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  z-index: 2;
+  padding: 10px 16px;
+  background: var(--paper);
+  transform: translateY(-180%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* Navigasi tetap terlihat, termasuk tanpa JavaScript. */
+.site-header { background: var(--teal); border-bottom: 3px solid var(--gold); }
+.header-inner { display: flex; flex-direction: column; gap: 16px; padding-top: 20px; padding-bottom: 16px; }
+.brand { display: flex; align-items: center; gap: 20px; min-height: 48px; color: var(--paper); text-decoration: none; width: fit-content; }
+.wordmark { font: 2.5rem/1 Georgia, 'Times New Roman', serif; letter-spacing: -0.04em; }
+.wordmark span { color: var(--gold); }
+.brand-description { max-width: 110px; color: var(--sage); font-size: 0.875rem; line-height: 1.4; }
+.site-nav ul { display: flex; gap: 4px; padding: 0; list-style: none; }
+.site-nav li { display: flex; flex: 1; }
+.site-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  color: var(--paper);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+.site-nav a:hover { background: var(--teal-hover); }
+.site-nav a[aria-current='page'] { background: var(--paper); color: var(--teal); font-weight: 700; }
+.site-header a:focus-visible { outline-color: var(--gold); }
+
+/* Satu kolom pada ponsel; lembar kerja dan catatan berdampingan di desktop. */
+main { padding-top: 32px; padding-bottom: 48px; }
+.page-heading { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+.page-heading p { max-width: 620px; margin-top: 12px; color: var(--muted); }
+.status { align-self: flex-start; padding: 6px 12px; border: 1px solid var(--line); border-radius: 4px; color: var(--muted); font-size: 0.875rem; white-space: nowrap; }
+.workspace { display: grid; gap: 24px; align-items: start; }
+.workspace > * { min-width: 0; }
+.paper {
+  position: relative;
+  padding: 24px;
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow), 0 5px 0 -1px var(--line), 0 9px 0 -3px var(--paper);
+}
+.paper-heading { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.paper-heading p { margin-top: 12px; color: var(--muted); }
+.collection-note { display: flex; gap: 16px; align-items: flex-start; padding: 24px 0; }
+.collection-note svg { flex: 0 0 32px; margin-top: 4px; color: var(--teal); }
+.collection-note p { margin-top: 8px; color: var(--muted); }
+.category-list { display: grid; gap: 0; }
+.category { padding: 20px 0; border-top: 1px solid var(--line); }
+.category p { margin-top: 8px; color: var(--muted); }
+.paper-footer { margin-top: 8px; padding-top: 20px; border-top: 1px solid var(--line); }
+.text-link { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; }
+
+.side-note { position: relative; padding: 32px 24px 24px; background: var(--sage); border-radius: 6px; }
+.side-note::before { content: ''; position: absolute; top: 0; left: 24px; width: 32px; height: 5px; background: var(--gold); }
+.side-note h2 { font-size: 1.5rem; }
+.side-note p { margin-top: 16px; }
+.side-note ol { margin-top: 20px; }
+.side-note li { padding-left: 4px; }
+.side-note li + li { margin-top: 12px; }
+.side-note .text-link { margin-top: 20px; }
+.note-caption { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); }
+.next-step { display: flex; flex-direction: column; gap: 8px; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line); }
+.next-step p { color: var(--muted); }
+
+.notice { margin-bottom: 24px; padding: 16px 20px; background: var(--sage); border-radius: 6px; }
+.notice p + p { margin-top: 4px; }
+.session-outline { list-style: none; padding: 0; counter-reset: session; }
+.session-outline li { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); counter-increment: session; }
+.session-outline li:last-child { border: 0; padding-bottom: 0; }
+.session-outline li::before { content: '0' counter(session); color: var(--muted); font: 1.25rem/1.3 Georgia, serif; }
+.session-outline p { margin-top: 8px; color: var(--muted); }
+.button-link { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 5px; background: var(--teal); color: var(--paper); font-weight: 700; text-decoration: none; transition: background-color 160ms ease; }
+.button-link:hover { background: var(--teal-hover); }
+.side-note .button-link { margin-top: 24px; }
+
+.guide-section + .guide-section { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+.guide-section { scroll-margin-top: 24px; }
+.guide-section h2 { margin-bottom: 16px; }
+.guide-section p + p { margin-top: 12px; }
+.guide-section ol, .guide-section ul { margin-top: 16px; }
+.guide-section li + li { margin-top: 12px; }
+.guide-section a { overflow-wrap: anywhere; }
+.guide-nav { margin-top: 16px; padding: 0; list-style: none; }
+.guide-nav a { display: flex; align-items: center; min-height: 44px; }
+.guide-nav li + li { margin-top: 4px; }
+.guide-note { color: var(--muted); }
+
+.site-footer { border-top: 1px solid var(--line); }
+.footer-inner { display: flex; flex-direction: column; gap: 8px; padding-top: 24px; padding-bottom: 28px; color: var(--muted); font-size: 0.875rem; }
+.footer-inner a { display: inline-flex; align-items: center; min-height: 44px; }
+
+@media (min-width: 640px) {
+  .container { width: calc(100% - 64px); }
+  main { padding-top: 40px; padding-bottom: 56px; }
+  h1 { font-size: 3rem; }
+  .header-inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 24px; padding-top: 24px; padding-bottom: 24px; }
+  .brand-description { display: none; }
+  .site-nav li { flex: initial; }
+  .site-nav a { padding: 12px 16px; font-size: 1rem; white-space: nowrap; }
+  .paper { padding: 32px; }
+  .category { display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: baseline; }
+  .category p { margin: 0; }
+  .footer-inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 24px; }
+}
+
+@media (min-width: 960px) {
+  .header-inner { padding-top: 26px; padding-bottom: 26px; }
+  .brand-description { display: block; }
+  .page-heading { flex-direction: row; justify-content: space-between; align-items: center; gap: 32px; margin-bottom: 32px; }
+  .status { align-self: center; }
+  .workspace { grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; }
+  .guide-workspace .paper { grid-column: 1; grid-row: 1; }
+  .guide-workspace .side-note { grid-column: 2; grid-row: 1; }
+  .paper { padding: 36px; }
+  .next-step { flex-direction: row; align-items: center; justify-content: space-between; gap: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav a, .button-link { transition: none; }
+}

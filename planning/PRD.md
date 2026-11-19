@@ -99,7 +99,7 @@ Baca `docs/CONTENT_GUIDE.md`. Jangan membuat dalil, tanggal trending, atau label
 9. Seluruh navigasi, form, fokus, dan layout dapat dipakai di mobile maupun keyboard.
 10. Tidak ada dependensi framework, storage, atau panggilan API produk.
 11. Tiap tahap mempunyai branch/PR/commit yang benar-benar dikerjakan, bukan dibuat setelah semua kode selesai.
-12. Skill tidak terlacak Git, README akurat, MIT tersedia, dan PRD dibersihkan setelah finalisasi.
+12. File alat kerja lokal tetap di luar Git, README akurat, MIT tersedia, dan PRD dibersihkan setelah finalisasi.
 
 ## 11. Pengembangan berikutnya
 

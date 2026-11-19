@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="300" viewBox="0 0 1100 300" role="img" aria-labelledby="title description">
+  <title id="title">Ramu — ruang kerja mentor</title>
+  <desc id="description">Wordmark Ramu pada latar teal dengan ilustrasi lembar catatan krem, sage, dan penanda emas. Animasi lembar hanya berjalan sekali.</desc>
+  <style>
+    .label { font-family: Arial, sans-serif; font-size: 14px; letter-spacing: 2px; }
+    .wordmark { font-family: Georgia, serif; font-size: 96px; }
+    .subtitle { font-family: Arial, sans-serif; font-size: 21px; }
+    .folio { font-family: Georgia, serif; font-size: 19px; }
+    .sheet { animation: settle 1.6s ease-out both; }
+    .line { animation: reveal 1.2s ease-out .6s both; transform-origin: 790px 0; }
+    @keyframes settle {
+      from { transform: translateY(12px); opacity: .5; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes reveal {
+      from { transform: scaleX(.65); opacity: .25; }
+      to { transform: scaleX(1); opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sheet, .line { animation: none; }
+    }
+  </style>
+  <rect width="1100" height="300" rx="14" fill="#073E43"/>
+  <path d="M40 266H1060" stroke="#E4EBE2" stroke-opacity=".22"/>
+  <text x="52" y="57" class="label" fill="#D9B54A">RUANG KERJA MENTOR</text>
+  <text x="47" y="158" class="wordmark" fill="#FFFDF7">Ramu<tspan fill="#D9B54A">.</tspan></text>
+  <text x="52" y="205" class="subtitle" fill="#E4EBE2">Bahan terarah. Pertemuan bermakna.</text>
+  <g class="sheet">
+    <rect x="777" y="49" width="260" height="193" rx="6" fill="#002D32"/>
+    <rect x="764" y="35" width="260" height="196" rx="6" fill="#B5C9BF"/>
+    <rect x="751" y="23" width="260" height="196" rx="6" fill="#FFFDF7"/>
+    <path d="M757 23H773V219H757A6 6 0 0 1 751 213V29A6 6 0 0 1 757 23Z" fill="#E4EBE2"/>
+    <path d="M963 23H984V65L973.5 58L963 65Z" fill="#D9B54A"/>
+    <text x="791" y="67" class="label" fill="#073E43">CATATAN MENTOR</text>
+    <path d="M791 86H969" stroke="#D5D7CA"/>
+    <g fill="#073E43" class="folio">
+      <text x="791" y="120">01</text>
+      <text x="791" y="156">02</text>
+      <text x="791" y="192">03</text>
+    </g>
+    <g class="line" stroke="#546763" stroke-width="3" stroke-linecap="round">
+      <path d="M831 113H958"/>
+      <path d="M831 149H940"/>
+      <path d="M831 185H951"/>
+    </g>
+  </g>
+</svg>

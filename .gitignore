@@ -20,7 +20,7 @@ __pycache__/
 Thumbs.db
 *.log
 
-# Original reference package (organized copies live in planning/)
+# Original reference files and unpublished brand assets
 /Ramu-*.md
 /Ramu-Design-Board.html
 /ramu-*.svg
