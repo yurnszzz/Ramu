@@ -14,6 +14,6 @@ Ringkasan dari materi dan instruksi final project yang tersedia secara lokal. Fi
 
 Framework diizinkan secara opsional oleh tugas kelas, tetapi keputusan Ramu adalah **HTML/CSS/JavaScript native**. Jangan menambahkan framework, build system, backend, database, akun, API data, penyimpanan browser, timer, atau notifikasi.
 
-T01 memakai HTML dan CSS saja. JavaScript ditambahkan ketika fitur DOM pada T02–T04 membutuhkannya; tidak perlu file JavaScript kosong atau interaksi buatan demi memenuhi daftar teknologi lebih awal.
+T01 memakai HTML dan CSS untuk tiga halaman. Pada T02, event `input` dan `change` membaca kata kunci serta kategori. JavaScript menyaring array lokal, memperbarui daftar yang terlihat, dan menampilkan detail materi yang dipilih.
 
 Kriteria tugas kelas mencakup proyek individu, minimal dua halaman/section, layout responsif, interaksi JavaScript DOM, dan repository publik. Ramu menargetkan tiga halaman; seluruh kriteria baru lengkap setelah tahap interaktif dan finalisasi. Batas pengumpulan yang diberikan: 20 November 2026, 23:59 WIB melalui Dignition.

@@ -1,8 +1,28 @@
-# Pemeriksaan T01
+# Pemeriksaan Ramu
+
+## T02 — Bank Materi
+
+Pada 19 November 2026, 84 pemeriksaan browser lulus di Chrome lokal. Bank Materi diuji melalui HTTP lokal dan dengan membuka `index.html` langsung dari folder proyek.
+
+| Alur yang dicoba | Hasil |
+| --- | --- |
+| Membuka koleksi dan memilih kategori | Enam ID dan judul berbeda. Masing-masing kategori berisi dua paket. |
+| Mencari judul atau ringkasan sambil memilih kategori | Huruf besar/kecil serta spasi di awal dan akhir kata kunci ditangani. Jumlah hasil mengikuti kedua filter. |
+| Mencari kombinasi yang tidak cocok | Tampil nol hasil. Kedua tombol reset mengembalikan enam paket. |
+| Membuka dan menutup detail dengan Enter | Fokus berpindah ke judul detail, lalu kembali ke tombol materi asal. |
+| Membaca keenam paket | Tiap paket menampilkan tujuan, pembuka, pokok bahasan, pertanyaan diskusi, tindak lanjut, dan tautan rujukan yang sesuai. Tautan Ruang Sesi menuju `sesi.html`. |
+| Layout pada 320, 360, 768, dan 1440 px | Daftar dan detail muat tanpa gulir horizontal. Ruang Sesi dan Panduan juga diperiksa pada keempat lebar. |
+| Aset dan JavaScript | Data dan aset halaman termuat secara lokal. Saat JavaScript dimatikan, navigasi dan tautan ke daftar sumber tetap dapat digunakan. |
+
+Enam rujukan dalam [daftar sumber](../panduan.html#sumber) dibuka dan dicocokkan dengan nomor ayat atau hadis serta topik paket. Pemeriksaan ini mencakup ketepatan rujukan. Pengujian tampilan memakai viewport simulasi Chrome di Windows. Perangkat fisik, Safari, Firefox, dan pembaca layar belum diuji.
+
+Untuk mengulang satu alur dari awal sampai akhir, cari `tabayun`, pilih kategori **Kontekstual**, lalu buka **Sebelum meneruskan kabar**. Tutup detail, ubah kategori menjadi **Tema dasar**, lalu pilih **Tampilkan semua materi** pada pesan hasil kosong.
+
+## T01 — Fondasi
 
 Tanggal: 16 November 2026. Cakupan: fondasi tiga halaman, CSS bersama, navigasi, dokumentasi, dan banner README. Hasil ini tidak menguji fitur T02–T04 yang belum dibuat.
 
-## Hasil
+### Hasil
 
 | Pemeriksaan | Hasil |
 | --- | --- |
@@ -21,7 +41,7 @@ Tanggal: 16 November 2026. Cakupan: fondasi tiga halaman, CSS bersama, navigasi,
 | Batas FE Basic/T01 | HTML/CSS native, tanpa script runtime, kontrol palsu, framework, API, atau storage |
 | Git | Diff bebas kesalahan whitespace. Daftar file yang dipublikasikan diperiksa terpisah dari berkas kerja lokal. |
 
-## Metode dan review
+### Metode dan review
 
 Pemeriksaan memakai Chrome headless yang sudah tersedia di Windows, melalui HTTP lokal dan file langsung. Ukuran viewport, DOM, navigasi, keyboard, resource, pembesaran teks, dan animasi diperiksa menggunakan harness sementara. Screenshot dan harness berada di `.local/`, tidak dipublikasikan sebagai source produk atau dependensi proyek.
 
@@ -31,11 +51,11 @@ Pemeriksa desain Impeccable dijalankan sekali. Ia memberi peringatan Arial dan l
 
 Pada 19 November 2026, setelah perapian dokumentasi, seluruh 46 rujukan lokal pada HTML dan Markdown diperiksa terhadap 17 file yang tercatat di indeks Git. Tujuan tautan, aset, dan fragment ditemukan. Tiga halaman, stylesheet, banner, dan lisensi identik dengan versi yang diperiksa pada 16 November.
 
-## Batas pemeriksaan
+### Batas pemeriksaan
 
 Belum diuji pada perangkat fisik, Safari, Firefox, atau pembaca layar. Pembesaran teks 200% bukan pengganti seluruh variasi zoom browser. Banner diperiksa sebagai SVG di Chrome lokal; animasi pada setiap klien GitHub belum diverifikasi. Screenshot statis dan teks alternatif tetap tersedia bila animasi tidak ditampilkan.
 
-## Review manual
+### Review manual
 
 1. Buka `index.html`, lalu gunakan ketiga tautan navigasi.
 2. Periksa lebar 320, 360, 768, dan 1440px melalui browser.
