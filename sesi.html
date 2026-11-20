@@ -51,14 +51,7 @@
 
       <div id="mode-editor" class="workspace session-workspace">
         <section class="paper" aria-labelledby="penyusun-title">
-          <div class="session-heading">
-            <h2 id="penyusun-title">Penyusun sesi</h2>
-            <button type="button" class="button-link session-primary" id="mulai-pandu">Buka mode pandu</button>
-          </div>
-          <div class="session-actions">
-            <a class="text-link" href="#pratinjau">Lihat pratinjau</a>
-            <a class="text-link" href="#catatan-sesi">Ke catatan sesi</a>
-          </div>
+          <h2 id="penyusun-title">Penyusun sesi</h2>
 
           <div class="template-picker">
             <div class="session-field">
@@ -126,7 +119,10 @@
         </section>
 
         <section class="side-note session-preview" id="pratinjau" aria-labelledby="pratinjau-title" tabindex="-1">
-          <h2 id="pratinjau-title">Pratinjau sesi</h2>
+          <div class="session-heading">
+            <h2 id="pratinjau-title">Pratinjau sesi</h2>
+            <button type="button" class="button-link session-primary" id="mulai-pandu">Pandu sesi ini</button>
+          </div>
           <h3 id="pratinjau-judul">Sesi tanpa judul</h3>
           <dl class="preview-summary">
             <dt>Sasaran peserta</dt><dd id="pratinjau-sasaran"></dd>
@@ -245,7 +241,6 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>Ramu · Bahan terarah, pertemuan bermakna.</p>
-      <a href="panduan.html#batas-draf">Tentang draf sementara</a>
     </div>
   </footer>
 </body>

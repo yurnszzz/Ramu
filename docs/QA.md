@@ -4,6 +4,8 @@
 
 Pada 20 November 2026, seluruh 77 pemeriksaan T04 dan 53 pemeriksaan regresi editor T03 lulus di Chrome pada Windows.
 
+Setelah navigasi diringkas, 101 pemeriksaan tambahan lulus pada empat lebar layar yang sama. Judul materi membuka detail dan menerima kembali fokus saat detail ditutup. Dari akhir form, tautan **Lihat pratinjau sesi** menuju pratinjau dan tombol **Pandu sesi ini** dapat dicapai dengan Tab. Dari mode pandu, **Kembali ke editor** memfokuskan isian langkah aktif. Ketiga tautan daftar isi Panduan juga menuju bagian yang sesuai.
+
 | Alur yang dicoba | Hasil |
 | --- | --- |
 | Memandu sesi dengan durasi 20, 30, dan 45 menit | Setiap langkah menampilkan teks dan alokasi yang sesuai. Tombol sebelumnya berhenti di pembuka dan tombol berikutnya berhenti di tindak lanjut. |

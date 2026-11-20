@@ -31,7 +31,7 @@ tombolPandu.addEventListener('click', function () {
 document.getElementById('kembali-editor').addEventListener('click', function () {
   modePandu.hidden = true;
   modeEditor.hidden = false;
-  tombolPandu.focus();
+  document.getElementById(bagian[langkahAktif]).focus();
 });
 tombolSebelumnya.addEventListener('click', function () {
   tampilkanLangkah(langkahAktif - 1);

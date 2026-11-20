@@ -50,7 +50,7 @@ Buka [localhost:8000](http://localhost:8000). Hentikan server dengan `Ctrl+C`. N
 
 Ramu mengikuti materi FE Basic tanpa framework atau dependensi runtime. Tidak ada backend, akun, database, API data, penyimpanan browser, timer, atau notifikasi.
 
-Dari editor, pilih **Buka mode pandu** untuk membawakan pembuka, bahasan utama, diskusi, dan tindak lanjut. Jika perlu mengubah pertanyaan saat pertemuan berjalan, kembali ke editor. Saat mode pandu dibuka lagi, Anda dapat melanjutkan langkah yang sama dengan isian terbaru. Centang persiapan dan isi catatan di halaman yang sama.
+Dari pratinjau, pilih **Pandu sesi ini** untuk membawakan pembuka, bahasan utama, diskusi, dan tindak lanjut. Jika pertanyaan perlu diubah, **Kembali ke editor** membawa Anda ke isian langkah yang sedang dibaca. Centang persiapan dan isi catatan di halaman yang sama.
 
 Rancangan dan catatan hanya tersedia selama halaman terbuka. Sebelum memuat ulang, menutup tab, atau berpindah halaman, pilih teks ringkasan sesi dan salin ke catatan pribadi.
 

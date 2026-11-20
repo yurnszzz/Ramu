@@ -19,8 +19,6 @@ function tutupDetail() {
   panel.hidden = true;
   if (tombolAktif) {
     tombolAktif.setAttribute('aria-expanded', 'false');
-    tombolAktif.textContent = 'Baca materi';
-    tombolAktif.setAttribute('aria-label', 'Baca materi: ' + judulDetail.textContent);
   }
   tombolAktif = null;
 }
@@ -49,8 +47,6 @@ function bukaDetail(materi, tombol) {
   );
   tombolAktif = tombol;
   tombol.setAttribute('aria-expanded', 'true');
-  tombol.textContent = 'Tutup materi';
-  tombol.setAttribute('aria-label', 'Tutup materi: ' + materi.judul);
   panel.hidden = false;
   judulDetail.focus();
 }
@@ -60,17 +56,18 @@ function buatKartu(materi) {
   kartu.className = 'kartu-materi';
   const kategori = buatTeks('p', materi.kategori);
   kategori.className = 'kategori-label';
-  const tombol = buatTeks('button', 'Baca materi');
+  const judul = document.createElement('h3');
+  const tombol = buatTeks('button', materi.judul);
   tombol.type = 'button';
   tombol.className = 'detail-link';
-  tombol.setAttribute('aria-label', 'Baca materi: ' + materi.judul);
   tombol.setAttribute('aria-controls', 'detail-materi');
   tombol.setAttribute('aria-expanded', 'false');
   tombol.addEventListener('click', function () {
     if (tombol === tombolAktif) tutupDetail();
     else bukaDetail(materi, tombol);
   });
-  kartu.append(kategori, buatTeks('h3', materi.judul), buatTeks('p', materi.ringkasan), tombol);
+  judul.append(tombol);
+  kartu.append(kategori, judul, buatTeks('p', materi.ringkasan));
   return kartu;
 }
 
