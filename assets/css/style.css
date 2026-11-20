@@ -110,21 +110,19 @@ main { padding-top: 32px; padding-bottom: 48px; }
 
 .notice { margin-bottom: 24px; padding: 16px 20px; background: var(--sage); border-radius: 6px; }
 .notice p + p { margin-top: 4px; }
-.session-outline { list-style: none; padding: 0; counter-reset: session; }
-.session-outline li { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); counter-increment: session; }
-.session-outline li:last-child { border: 0; padding-bottom: 0; }
-.session-outline li::before { content: '0' counter(session); color: var(--muted); font: 1.25rem/1.3 Georgia, serif; }
-.session-outline p { margin-top: 8px; color: var(--muted); }
 .button-link { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border-radius: 5px; background: var(--teal); color: var(--paper); font-weight: 700; text-decoration: none; transition: background-color 160ms ease; }
 .button-link:hover { background: var(--teal-hover); }
 .side-note .button-link { margin-top: 24px; }
 
 /* Bank Materi: catatan filter dan lembar indeks menggunakan material yang sama dengan panduan. */
 #filter-materi { display: grid; gap: 16px; margin-top: 16px; }
-.filter-field { min-width: 0; }
-.filter-field label { display: block; margin-bottom: 4px; font-weight: 700; }
+.filter-field, .session-field { min-width: 0; }
+.filter-field label, .session-field label { display: block; margin-bottom: 4px; font-weight: 700; }
 .filter-field input,
-.filter-field select {
+.filter-field select,
+.session-field input,
+.session-field select,
+.session-field textarea {
   width: 100%;
   min-height: 46px;
   padding: 8px 10px;
@@ -135,7 +133,9 @@ main { padding-top: 32px; padding-bottom: 48px; }
   font: inherit;
   box-shadow: inset 0 2px 3px rgba(7, 62, 67, 0.08);
 }
-.filter-field input::placeholder { color: var(--muted); opacity: 1; }
+.filter-field input::placeholder,
+.session-field input::placeholder,
+.session-field textarea::placeholder { color: var(--muted); opacity: 1; }
 .bank-button,
 .detail-link {
   min-height: 44px;
@@ -183,6 +183,36 @@ main { padding-top: 32px; padding-bottom: 48px; }
 #isi-detail a { display: inline-block; min-height: 44px; padding: 8px 0; }
 .detail-footer { margin-top: 16px; padding-top: 20px; border-top: 1px solid var(--line); }
 
+/* Lembar penyusun sesi dan catatan alur yang dapat dibaca sambil menyunting. */
+.session-heading, .session-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; }
+.session-heading { justify-content: space-between; }
+.template-picker, .session-basics { display: grid; gap: 12px; }
+.template-picker { align-items: end; margin-top: 16px; }
+.session-primary { justify-self: start; border: 0; font-family: inherit; font-size: 1rem; cursor: pointer; }
+.session-primary:disabled { background: var(--sage); color: var(--muted); cursor: default; }
+.replace-note { margin-top: 16px; padding: 16px; background: var(--sage); border-radius: 4px; }
+.replace-note p { margin: 8px 0 12px; }
+#status-template:not(:empty) { margin-top: 12px; }
+#editor-sesi { display: grid; gap: 18px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+#editor-sesi, #pratinjau { scroll-margin-top: 16px; }
+#editor-sesi > a { justify-self: start; }
+.session-field textarea { display: block; resize: vertical; }
+.session-flow { min-width: 0; margin: 8px 0 0; padding: 0; border: none; }
+.session-flow legend { margin-bottom: 12px; padding: 0; font: 1.5rem/1.3 Georgia, 'Times New Roman', serif; }
+.session-flow .session-field + .session-field { margin-top: 16px; }
+.session-preview { overflow-wrap: anywhere; }
+#pratinjau-judul { margin-top: 20px; font-family: Georgia, 'Times New Roman', serif; font-size: 1.25rem; }
+.preview-summary { margin: 16px 0 0; }
+.preview-summary dt { margin-top: 12px; font-weight: 700; }
+.preview-summary dd { margin: 0; }
+.preview-hint { color: var(--muted); }
+.session-preview .preview-flow { margin-top: 12px; padding: 0; list-style: none; }
+.preview-flow li { padding: 16px 0 0; border-top: 1px solid var(--line); }
+.preview-flow h3 { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; align-items: baseline; }
+.preview-flow h3 span { color: var(--muted); font-size: 0.875rem; white-space: nowrap; }
+.preview-flow p { margin-top: 6px; }
+#pratinjau-judul, .preview-summary dd, .preview-flow p { white-space: pre-wrap; }
+
 .guide-section + .guide-section { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
 .guide-section { scroll-margin-top: 24px; }
 .guide-section h2 { margin-bottom: 16px; }
@@ -213,6 +243,7 @@ main { padding-top: 32px; padding-bottom: 48px; }
   .site-nav li { flex: initial; }
   .site-nav a { padding: 12px 16px; font-size: 1rem; white-space: nowrap; }
   .paper { padding: 32px; }
+  .template-picker, .session-basics { grid-template-columns: minmax(0, 1fr) auto; }
   .index-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding-right: 24px; }
   .index-heading p { margin: 0; }
   .footer-inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 24px; }
@@ -228,6 +259,7 @@ main { padding-top: 32px; padding-bottom: 48px; }
   .page-heading { flex-direction: row; justify-content: space-between; align-items: center; gap: 32px; margin-bottom: 32px; }
   .status { align-self: center; }
   .workspace { grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; }
+  .session-workspace { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
   .guide-workspace .paper { grid-column: 1; grid-row: 1; }
   .guide-workspace .side-note { grid-column: 2; grid-row: 1; }
   .bank-workspace .bank-sheets { grid-column: 1; grid-row: 1; }

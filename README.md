@@ -11,14 +11,14 @@
 
 Ramu adalah ruang kerja sederhana untuk mentor pembinaan Islam lintas komunitas: menyiapkan bahan, menyusun pertemuan, dan mendampingi diskusi dengan lebih terarah. Proyek ini dikerjakan sebagai final project **Frontend Basic KSM Veterantech**.
 
-**Bank Materi kini berisi enam paket diskusi.** Cari kata dari judul atau ringkasan, pilih kategori, lalu buka paket untuk membaca pertanyaan diskusi dan sumbernya. Contohnya, cari `tabayun` untuk menemukan latihan memeriksa kabar di grup kelas.
+**Ramu menyediakan delapan bahan diskusi yang bisa diolah menjadi rancangan sesi.** Misalnya, cari `musyawarah` di Bank Materi untuk membaca latihan memilih kegiatan bersama. Buka Ruang Sesi, pilih **Memilih kegiatan lewat musyawarah**, lalu tekan **Muat template** untuk menyesuaikannya dengan kelompok Anda.
 
 ## Halaman
 
 | Halaman | Peran dalam Ramu |
 | --- | --- |
 | [Bank Materi](index.html) | Tempat memilih bahan pembinaan. |
-| [Ruang Sesi](sesi.html) | Kerangka empat bagian pertemuan. Editor dan mode pandu direncanakan pada tahap selanjutnya. |
+| [Ruang Sesi](sesi.html) | Menulis rundown dari awal atau dari template, memilih durasi, dan melihat pratinjau saat mengetik. |
 | [Panduan & Sumber](panduan.html) | Penjelasan cara pakai, batas draf, dan prinsip kurasi. |
 
 Tampilan memakai teal gelap, kertas krem, sage, serta aksen emas. Bayangan tipis dan lapisan kertas memberi kesan meja kerja yang tenang. Wordmark teks digunakan sambil menunggu persetujuan logo final.
@@ -32,7 +32,7 @@ git clone https://github.com/yurnszzz/Ramu.git
 cd Ramu
 ```
 
-Untuk meninjau Bank Materi sebelum T02 masuk ke `main`, jalankan `git switch feat/t02-bank-materi` setelah clone.
+Untuk meninjau penyusun sesi sebelum T03 masuk ke `main`, jalankan `git switch feat/t03-penyusun-sesi` setelah clone.
 
 Buka `index.html` langsung di browser. Untuk menjalankannya melalui HTTP lokal, gunakan Python dari folder proyek.
 
@@ -46,11 +46,11 @@ Buka [localhost:8000](http://localhost:8000). Hentikan server dengan `Ctrl+C`. N
 
 - **HTML** untuk struktur semantik dan navigasi tiga halaman.
 - **CSS biasa** untuk warna, tipografi, flex/grid, state fokus, dan media query.
-- **JavaScript native** untuk menyaring array materi, memperbarui jumlah hasil, serta membuka dan menutup detail melalui DOM.
+- **JavaScript native** untuk menyaring array materi, membuka detail, mengisi form dari template, dan menampilkan pratinjau melalui DOM.
 
 Ramu mengikuti materi FE Basic tanpa framework atau dependensi runtime. Tidak ada backend, akun, database, API data, penyimpanan browser, timer, atau notifikasi.
 
-Pada fitur sesi yang direncanakan, isian hanya hidup di dokumen yang sedang terbuka. Reload atau berpindah halaman dapat menghilangkan draf; Ramu tidak menjanjikan penyimpanan permanen atau sinkronisasi perangkat.
+Draf sesi berada di halaman yang sedang terbuka. Salin teks pratinjau ke catatan pribadi sebelum memuat ulang, menutup tab, atau berpindah halaman.
 
 ## Struktur proyek
 
@@ -61,7 +61,7 @@ Ramu/
 ├── panduan.html        # Panduan & Sumber
 ├── assets/
 │   ├── css/            # Style bersama untuk ketiga halaman
-│   └── js/             # Koleksi materi dan interaksi Bank Materi
+│   └── js/             # Koleksi materi, filter, dan editor sesi
 ├── docs/               # Desain, batas materi, kurasi, dan hasil QA
 │   └── assets/         # Aset dokumentasi README
 ├── planning/           # Kebutuhan produk dan tahap pengerjaan
@@ -69,15 +69,15 @@ Ramu/
 └── LICENSE
 ```
 
-Koleksi dan sumber berada di [materi.js](assets/js/materi.js). Fungsi `tampilkanHasil()` pada [bank-materi.js](assets/js/bank-materi.js) membaca kedua filter dan menggambar ulang daftar. Semua bahan dimuat dari file lokal. Tautan rujukan dapat dibuka saat tersedia koneksi internet.
+Koleksi dan sumber berada di [materi.js](assets/js/materi.js). Bank Materi menyaring koleksi di [bank-materi.js](assets/js/bank-materi.js). Editor membaca koleksi yang sama dan memperbarui pratinjau melalui [sesi.js](assets/js/sesi.js). Ketiga file dimuat secara lokal. Tautan rujukan dapat dibuka saat tersedia koneksi internet.
 
 ## Tahap pengerjaan
 
 | Tahap | Cakupan | Status |
 | --- | --- | --- |
 | T01 | Tiga halaman, navigasi, fondasi CSS, dan layout responsif | Digabung ke `main` |
-| T02 | Bank Materi: konten bersumber, pencarian, filter, dan detail | Siap direview |
-| T03 | Penyusun sesi, template, durasi, dan preview | Direncanakan |
+| T02 | Bank Materi: konten bersumber, pencarian, filter, dan detail | Digabung ke `main` |
+| T03 | Penyusun sesi, template, durasi, dan pratinjau | Siap direview |
 | T04 | Mode pandu, catatan, dan evaluasi sementara | Direncanakan |
 | T05 | Pemeriksaan akhir, dokumentasi, dan pembersihan proyek | Direncanakan |
 

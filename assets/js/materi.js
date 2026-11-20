@@ -124,5 +124,47 @@ const daftarMateri = [
       label: "Arba’in an-Nawawi, hadis 15 · Sunnah.com",
       url: "https://sunnah.com/nawawi40:15"
     }
+  },
+  {
+    id: "musyawarah-kegiatan",
+    judul: "Memilih kegiatan lewat musyawarah",
+    kategori: "Kontekstual",
+    ringkasan: "Latihan mengambil keputusan bersama saat dua kegiatan sama-sama diusulkan dan waktu kelompok terbatas.",
+    tujuan: "Peserta dapat merangkum alasan di balik dua usulan dan menjelaskan pertimbangan kelompok saat memilih.",
+    pembuka: "Kelompok punya satu hari luang. Ada yang ingin mengadakan kelas baca, ada pula yang ingin membantu di dapur umum. Sebelum memilih, apa yang perlu kalian dengar dari kedua pengusul?",
+    pokokBahasan: [
+      "Baca Asy-Syura ayat 38. Ajak peserta menemukan bagian yang menyebut musyawarah ketika orang beriman mengurus persoalan bersama.",
+      "Dalam latihan, minta pengusul menjelaskan siapa yang membutuhkan kegiatan itu dan persiapan apa yang diperlukan. Beri anggota lain kesempatan bertanya. Sebelum memilih, minta seseorang merangkum alasan kedua pihak dengan bahasanya sendiri."
+    ],
+    pertanyaan: [
+      "Apa yang baru kalian ketahui setelah mendengar alasan dari usulan yang awalnya tidak kalian pilih?",
+      "Bagaimana kalian menjelaskan keputusan akhir kepada anggota yang usulannya belum bisa dijalankan?"
+    ],
+    tindakLanjut: "Di akhir musyawarah, tulis kegiatan yang disepakati, alasannya, dan siapa yang bersedia menghubungi pihak terkait. Bacakan kembali agar anggota dapat mengoreksi rangkuman itu.",
+    sumber: {
+      label: "QS. Asy-Syura [42] ayat 38 · Quran.com",
+      url: "https://quran.com/id/musyawarah/38"
+    }
+  },
+  {
+    id: "istiqamah-belajar",
+    judul: "Menjaga kebiasaan belajar",
+    kategori: "Rujukan Arba’in",
+    ringkasan: "Membaca hadis tentang istiqamah dan merancang cara kembali belajar setelah rutinitas sempat terputus.",
+    tujuan: "Peserta dapat menyebut pesan utama hadis dan memilih satu kebiasaan untuk mengulang bahan pembinaan.",
+    pembuka: "Seorang teman biasa membaca ulang catatan sepulang kuliah. Saat jadwal praktikum berubah, catatannya tidak tersentuh selama dua pekan. Jika ia ingin mulai lagi sore ini, apa yang bisa ia kerjakan?",
+    pokokBahasan: [
+      "Baca hadis ke-21 Arba’in an-Nawawi. Sufyan bin Abdullah meminta nasihat tentang Islam. Perhatikan kaitan antara iman kepada Allah dan keteguhan dalam menjalankannya pada jawaban Nabi.",
+      "Untuk latihan sehari-hari, coba buka kembali bahan pertemuan terakhir. Pilih satu bagian yang ingin dipahami lebih baik dan pikirkan kapan kalian bisa membacanya kembali."
+    ],
+    pertanyaan: [
+      "Apa hubungan antara pernyataan iman dan pesan untuk tetap teguh dalam hadis ini?",
+      "Kapan kamu punya waktu untuk membuka kembali bahan yang kamu pilih? Kalau waktunya terlewat, kapan kamu akan mencobanya lagi?"
+    ],
+    tindakLanjut: "Tentukan satu kesempatan untuk membaca ulang bagian pilihanmu pekan ini. Bawa satu pertanyaan dari bacaan itu ke pertemuan berikutnya.",
+    sumber: {
+      label: "Arba’in an-Nawawi, hadis 21 · Sunnah.com",
+      url: "https://sunnah.com/nawawi40:21"
+    }
   }
 ];
