@@ -1,5 +1,20 @@
 # Pemeriksaan Ramu
 
+## T05 — Pemeriksaan akhir
+
+Pada 20 November 2026, seluruh **328 pemeriksaan browser** lulus di Chrome pada Windows. Pengujian memakai HTTP lokal serta halaman yang dibuka langsung dari file.
+
+| Bagian | Pemeriksaan lulus | Alur yang diperiksa |
+| --- | ---: | --- |
+| Bank Materi | 97 | Delapan judul, pencarian dan kategori bersama, hasil kosong, reset, isi dan sumber tiap paket, serta fokus setelah detail ditutup. |
+| Penyusun sesi | 53 | Draf manual, delapan template, konfirmasi sebelum menimpa suntingan, pratinjau, dan pembagian durasi 20, 30, serta 45 menit. |
+| Mode pandu dan evaluasi | 77 | Empat langkah, penyuntingan langkah aktif, checklist, catatan, evaluasi, dan pemilihan teks ringkasan dengan keyboard. |
+| Navigasi | 101 | Perpindahan antartiga halaman dan alur dari judul materi hingga kembali ke isian langkah aktif pada 320, 360, 768, dan 1440 px. |
+
+Bank Materi dan Ruang Sesi tetap dapat dipakai dari file saat jaringan diputus. Delapan tautan ayat atau hadis dibuka secara terpisah dan dicocokkan dengan nomor rujukan. Tautan jadwal salat membuka layanan pemilihan wilayah milik Kementerian Agama. [Daftar sumber](../panduan.html#sumber)
+
+Pemeriksaan berkas mencakup tautan dan target bagian di dokumentasi publik, label form, banner README, dan lisensi MIT. Ukuran layar disimulasikan di Chrome. Perangkat fisik, Firefox, Safari, dan pembaca layar belum diuji.
+
 ## T04 — Mode pandu dan evaluasi
 
 Pada 20 November 2026, seluruh 77 pemeriksaan T04 dan 53 pemeriksaan regresi editor T03 lulus di Chrome pada Windows.

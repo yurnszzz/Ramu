@@ -10,7 +10,7 @@ Simpan paket di [materi.js](../assets/js/materi.js). Setiap paket memiliki ID un
 - Label “Kontekstual” menjelaskan kedekatan dengan keseharian, bukan klaim sedang viral.
 - Sumber yang tersedia tidak otomatis berarti review ulama. Jangan memberi label verified atau endorsement tanpa bukti.
 - Jangan memakai AI untuk membuat hukum agama. Ramu bukan pengganti bimbingan guru yang kompeten.
-- Tautan jadwal salat resmi baru ditambahkan setelah diverifikasi, tanpa widget atau lokasi otomatis.
+- Bagian **Daftar sumber** juga menautkan jadwal salat Bimas Islam Kementerian Agama. Saat memperbarui alamatnya, periksa kembali halaman resmi yang dituju.
 - Jangan meminta data sensitif peserta; catatan versi dasar bersifat sementara dan tidak dikirim.
 
 Foto dan logo akhir harus disediakan atau disetujui pengguna. Jangan menyatakan calon aset telah disetujui. Perubahan konten dilakukan manual melalui file lokal, tanpa fetch atau API.
