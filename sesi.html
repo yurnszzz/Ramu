@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Susun pertemuan pembinaan dari template materi atau rancangan sendiri, lalu lihat alur dan pembagian waktunya.">
+  <meta name="description" content="Susun pertemuan pembinaan, pandu empat langkah diskusi, dan catat hasil yang ingin dibawa ke pertemuan berikutnya.">
   <title>Ruang Sesi — Ramu</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/materi.js"></script>
   <script defer src="assets/js/sesi.js"></script>
+  <script defer src="assets/js/pandu.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
@@ -32,28 +33,25 @@
     <div class="page-heading">
       <div>
         <h1>Ruang Sesi</h1>
-        <p>Mulai dari template materi atau tulis alur pertemuanmu sendiri.</p>
+        <p>Siapkan alur, pandu diskusi, dan catat hasil pertemuanmu.</p>
       </div>
     </div>
 
     <noscript>
       <div class="notice">
-        <p>Aktifkan JavaScript untuk menyusun sesi dan melihat pratinjau.</p>
+        <p>Aktifkan JavaScript untuk menyusun sesi, memandu diskusi, dan mencatat hasilnya.</p>
         <a class="text-link" href="panduan.html#cara-pakai">Baca panduan</a>
       </div>
     </noscript>
 
     <div id="ruang-interaktif" hidden>
       <div class="notice" id="batas-draf">
-        <p><strong>Draf sementara.</strong> Isian dapat hilang saat kamu memuat ulang atau meninggalkan halaman. Salin rancangan yang ingin disimpan.</p>
+        <p><strong>Draf sementara.</strong> Rancangan dan catatan dapat hilang saat kamu memuat ulang atau meninggalkan halaman. Salin ringkasan yang ingin disimpan.</p>
       </div>
 
-      <div class="workspace session-workspace">
+      <div id="mode-editor" class="workspace session-workspace">
         <section class="paper" aria-labelledby="penyusun-title">
-          <div class="session-heading">
-            <h2 id="penyusun-title">Penyusun sesi</h2>
-            <a class="text-link" href="#pratinjau">Lihat pratinjau</a>
-          </div>
+          <h2 id="penyusun-title">Penyusun sesi</h2>
 
           <div class="template-picker">
             <div class="session-field">
@@ -121,7 +119,10 @@
         </section>
 
         <section class="side-note session-preview" id="pratinjau" aria-labelledby="pratinjau-title" tabindex="-1">
-          <h2 id="pratinjau-title">Pratinjau sesi</h2>
+          <div class="session-heading">
+            <h2 id="pratinjau-title">Pratinjau sesi</h2>
+            <button type="button" class="button-link session-primary" id="mulai-pandu">Pandu sesi ini</button>
+          </div>
           <h3 id="pratinjau-judul">Sesi tanpa judul</h3>
           <dl class="preview-summary">
             <dt>Sasaran peserta</dt><dd id="pratinjau-sasaran"></dd>
@@ -150,13 +151,96 @@
           <a class="text-link" href="#editor-sesi">Kembali ke isian</a>
         </section>
       </div>
+
+      <section class="paper guide-sheet" id="mode-pandu" aria-label="Mode pandu" hidden>
+        <div class="paper-heading">
+          <div class="session-heading">
+            <p>Mode pandu</p>
+            <button type="button" class="bank-button" id="kembali-editor">Kembali ke editor</button>
+          </div>
+          <h2 id="pandu-sesi"></h2>
+        </div>
+        <div class="step-meta">
+          <span id="pandu-posisi"></span>
+          <span>Alokasi <span id="pandu-menit"></span></span>
+        </div>
+        <h3 id="pandu-langkah" tabindex="-1" aria-describedby="pandu-posisi pandu-menit"></h3>
+        <p id="pandu-isi"></p>
+        <div class="step-controls">
+          <button type="button" class="bank-button" id="sebelumnya" disabled>Sebelumnya</button>
+          <button type="button" class="button-link session-primary" id="berikutnya">Berikutnya</button>
+        </div>
+        <a class="text-link" href="#catatan-sesi">Ke catatan sesi</a>
+      </section>
+
+      <section class="side-note session-notes" id="catatan-sesi" aria-labelledby="catatan-title" tabindex="-1">
+        <h2 id="catatan-title">Catatan sesi</h2>
+        <details>
+          <summary>Cek persiapan</summary>
+          <div class="prep-checks">
+            <label for="siap-tujuan"><input type="checkbox" id="siap-tujuan"> Tujuan pertemuan jelas</label>
+            <label for="siap-rujukan"><input type="checkbox" id="siap-rujukan"> Rujukan sudah diperiksa</label>
+            <label for="siap-pertanyaan"><input type="checkbox" id="siap-pertanyaan"> Pertanyaan diskusi siap</label>
+          </div>
+        </details>
+        <details>
+          <summary>Catatan pertemuan</summary>
+          <div class="notes-fields">
+            <div class="session-field">
+              <label for="hasil-pertemuan">Hasil pertemuan</label>
+              <textarea id="hasil-pertemuan" rows="3"></textarea>
+            </div>
+            <div class="session-field">
+              <label for="pertanyaan-tertunda">Pertanyaan tertunda</label>
+              <textarea id="pertanyaan-tertunda" rows="3"></textarea>
+            </div>
+            <div class="session-field">
+              <label for="catatan-lanjut">Tindak lanjut yang disepakati</label>
+              <textarea id="catatan-lanjut" rows="3"></textarea>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Evaluasi target</summary>
+          <div class="notes-fields">
+            <div class="session-field">
+              <label for="target-pertemuan">Target yang disepakati</label>
+              <textarea id="target-pertemuan" rows="2"></textarea>
+            </div>
+            <div class="session-field">
+              <label for="status-target">Status target</label>
+              <select id="status-target">
+                <option value="">Pilih status</option>
+                <option>Belum dicoba</option>
+                <option>Sudah dicoba</option>
+              </select>
+            </div>
+            <div class="session-field">
+              <label for="kendala">Kendala</label>
+              <textarea id="kendala" rows="2"></textarea>
+            </div>
+            <div class="session-field">
+              <label for="langkah-berikut">Langkah berikutnya</label>
+              <textarea id="langkah-berikut" rows="2"></textarea>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Ringkasan sesi</summary>
+          <div class="session-field summary-field">
+            <label for="ringkasan-sesi">Teks ringkasan</label>
+            <p id="cara-salin">Pilih teks, lalu salin ke catatan pribadimu sebelum meninggalkan halaman.</p>
+            <textarea id="ringkasan-sesi" rows="8" aria-describedby="cara-salin" readonly></textarea>
+          </div>
+        </details>
+        <a class="text-link" id="kembali-ke-langkah" href="#pandu-langkah">Kembali ke langkah aktif</a>
+      </section>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>Ramu · Bahan terarah, pertemuan bermakna.</p>
-      <a href="panduan.html#batas-draf">Tentang draf sementara</a>
     </div>
   </footer>
 </body>

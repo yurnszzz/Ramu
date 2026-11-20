@@ -6,8 +6,8 @@ Setiap tahap memakai satu branch dan satu PR. Mulai tahap berikutnya setelah PR 
 | --- | --- | --- |
 | T01 | Fondasi tiga halaman dan desain responsif | MERGED ([PR #1](https://github.com/yurnszzz/Ramu/pull/1)) |
 | T02 | Bank Materi interaktif dan konten bersumber | MERGED ([PR #2](https://github.com/yurnszzz/Ramu/pull/2)) |
-| T03 | Penyusun sesi dan preview | READY_FOR_REVIEW |
-| T04 | Mode pandu, catatan, evaluasi | PLANNED |
+| T03 | Penyusun sesi dan preview | MERGED ([PR #3](https://github.com/yurnszzz/Ramu/pull/3)) |
+| T04 | Mode pandu, catatan, evaluasi | READY_FOR_REVIEW |
 | T05 | QA akhir, dokumentasi, dan pembersihan | PLANNED |
 
 ## T01 — Fondasi
