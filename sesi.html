@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kenali Ruang Sesi Ramu dan alur empat bagian untuk menyiapkan pertemuan pembinaan.">
+  <meta name="description" content="Susun pertemuan pembinaan dari template materi atau rancangan sendiri, lalu lihat alur dan pembagian waktunya.">
   <title>Ruang Sesi — Ramu</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/materi.js"></script>
+  <script defer src="assets/js/sesi.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#konten">Lewati ke konten utama</a>
@@ -30,50 +32,124 @@
     <div class="page-heading">
       <div>
         <h1>Ruang Sesi</h1>
-        <p>Tempat meramu bahan menjadi alur pertemuan yang memberi ruang untuk belajar dan mendengar.</p>
+        <p>Mulai dari template materi atau tulis alur pertemuanmu sendiri.</p>
       </div>
-      <span class="status">Ruang dalam persiapan</span>
     </div>
 
-    <div class="notice">
-      <p><strong>Penyusun sesi belum tersedia.</strong></p>
-      <p>Halaman ini mengenalkan kerangka pertemuan. Template, editor, mode pandu, dan catatan akan hadir pada tahap berikutnya.</p>
-    </div>
+    <noscript>
+      <div class="notice">
+        <p>Aktifkan JavaScript untuk menyusun sesi dan melihat pratinjau.</p>
+        <a class="text-link" href="panduan.html#cara-pakai">Baca panduan</a>
+      </div>
+    </noscript>
 
-    <div class="workspace">
-      <section class="paper" aria-labelledby="alur-title">
-        <div class="paper-heading">
-          <h2 id="alur-title">Satu pertemuan, empat bagian.</h2>
-          <p>Kerangka sederhana agar pembukaan, bahasan, dan hasil diskusi saling terhubung.</p>
-        </div>
-        <ol class="session-outline">
-          <li>
-            <div><h3>Pembuka</h3><p>Bangun suasana yang nyaman dan sampaikan tujuan pertemuan.</p></div>
-          </li>
-          <li>
-            <div><h3>Bahasan utama</h3><p>Jelajahi pokok materi dengan rujukan yang sudah diperiksa.</p></div>
-          </li>
-          <li>
-            <div><h3>Diskusi</h3><p>Beri waktu untuk bertanya, berbagi pengalaman, dan mendengarkan.</p></div>
-          </li>
-          <li>
-            <div><h3>Tindak lanjut</h3><p>Rangkum pembelajaran dan sepakati satu langkah yang dapat dicoba.</p></div>
-          </li>
-        </ol>
-      </section>
+    <div id="ruang-interaktif" hidden>
+      <div class="notice" id="batas-draf">
+        <p><strong>Draf sementara.</strong> Isian dapat hilang saat kamu memuat ulang atau meninggalkan halaman. Salin rancangan yang ingin disimpan.</p>
+      </div>
 
-      <aside class="side-note" aria-labelledby="draf-title">
-        <h2 id="draf-title">Kenali batas draf</h2>
-        <p>Pada penyusun sesi yang akan tersedia, isian hanya berada di halaman yang sedang terbuka.</p>
-        <p><strong>Memuat ulang atau berpindah halaman dapat menghilangkan draf.</strong> Tidak ada penyimpanan permanen maupun sinkronisasi antarperangkat.</p>
-        <a class="text-link" href="panduan.html#batas-draf">Baca penjelasan draf</a>
-        <div class="note-caption">Bahan dari Bank Materi tidak otomatis dibawa ke halaman ini.</div>
-      </aside>
-    </div>
+      <div class="workspace session-workspace">
+        <section class="paper" aria-labelledby="penyusun-title">
+          <div class="session-heading">
+            <h2 id="penyusun-title">Penyusun sesi</h2>
+            <a class="text-link" href="#pratinjau">Lihat pratinjau</a>
+          </div>
 
-    <div class="next-step">
-      <p>Mulai persiapan dengan memahami cara memilih bahan.</p>
-      <a class="text-link" href="index.html">Kembali ke Bank Materi</a>
+          <div class="template-picker">
+            <div class="session-field">
+              <label for="template-sesi">Template materi</label>
+              <select id="template-sesi">
+                <option value="">Pilih materi</option>
+              </select>
+            </div>
+            <button type="button" class="button-link session-primary" id="muat-template" disabled>Muat template</button>
+          </div>
+          <div class="replace-note" id="konfirmasi-template" role="group" aria-labelledby="judul-konfirmasi" hidden>
+            <h3 id="judul-konfirmasi">Ganti isi rancangan?</h3>
+            <p>Template akan mengganti judul, tujuan, dan empat bagian alur. Sasaran peserta dan durasi tetap seperti sekarang.</p>
+            <div class="session-actions">
+              <button type="button" class="bank-button" id="batal-template">Batal</button>
+              <button type="button" class="button-link session-primary" id="ganti-template">Ganti isi</button>
+            </div>
+          </div>
+          <p id="status-template" role="status"></p>
+
+          <form id="editor-sesi" aria-label="Isian rancangan sesi" aria-describedby="batas-draf" tabindex="-1" autocomplete="off">
+            <div class="session-field">
+              <label for="judul-sesi">Judul sesi</label>
+              <input id="judul-sesi" type="text" placeholder="Nama pertemuan">
+            </div>
+            <div class="session-basics">
+              <div class="session-field">
+                <label for="sasaran-sesi">Sasaran peserta</label>
+                <input id="sasaran-sesi" type="text" placeholder="Misalnya, mahasiswa baru">
+              </div>
+              <div class="session-field">
+                <label for="durasi-sesi">Durasi</label>
+                <select id="durasi-sesi">
+                  <option value="20">20 menit</option>
+                  <option value="30" selected>30 menit</option>
+                  <option value="45">45 menit</option>
+                </select>
+              </div>
+            </div>
+            <div class="session-field">
+              <label for="tujuan-sesi">Tujuan pertemuan</label>
+              <textarea id="tujuan-sesi" rows="2" placeholder="Apa yang ingin dicapai peserta?"></textarea>
+            </div>
+            <fieldset class="session-flow">
+              <legend>Alur pertemuan</legend>
+              <div class="session-field">
+                <label for="pembuka">Pembuka</label>
+                <textarea id="pembuka" rows="3" placeholder="Bagaimana kamu akan membuka percakapan?"></textarea>
+              </div>
+              <div class="session-field">
+                <label for="bahasan">Bahasan utama</label>
+                <textarea id="bahasan" rows="4" placeholder="Tuliskan pokok bahasan yang ingin dibaca bersama."></textarea>
+              </div>
+              <div class="session-field">
+                <label for="diskusi">Diskusi</label>
+                <textarea id="diskusi" rows="3" placeholder="Pertanyaan apa yang ingin kamu ajukan?"></textarea>
+              </div>
+              <div class="session-field">
+                <label for="tindak-lanjut">Tindak lanjut</label>
+                <textarea id="tindak-lanjut" rows="3" placeholder="Langkah apa yang dapat dicoba setelah pertemuan?"></textarea>
+              </div>
+            </fieldset>
+            <a class="text-link" href="#pratinjau">Lihat pratinjau sesi</a>
+          </form>
+        </section>
+
+        <section class="side-note session-preview" id="pratinjau" aria-labelledby="pratinjau-title" tabindex="-1">
+          <h2 id="pratinjau-title">Pratinjau sesi</h2>
+          <h3 id="pratinjau-judul">Sesi tanpa judul</h3>
+          <dl class="preview-summary">
+            <dt>Sasaran peserta</dt><dd id="pratinjau-sasaran"></dd>
+            <dt>Tujuan pertemuan</dt><dd id="pratinjau-tujuan"></dd>
+            <dt>Durasi</dt><dd id="pratinjau-durasi"></dd>
+          </dl>
+          <p class="preview-hint">Alokasi menit di bawah adalah saran pembagian waktu.</p>
+          <ol class="preview-flow">
+            <li>
+              <h3>Pembuka <span id="menit-pembuka"></span></h3>
+              <p id="pratinjau-pembuka"></p>
+            </li>
+            <li>
+              <h3>Bahasan utama <span id="menit-bahasan"></span></h3>
+              <p id="pratinjau-bahasan"></p>
+            </li>
+            <li>
+              <h3>Diskusi <span id="menit-diskusi"></span></h3>
+              <p id="pratinjau-diskusi"></p>
+            </li>
+            <li>
+              <h3>Tindak lanjut <span id="menit-tindak-lanjut"></span></h3>
+              <p id="pratinjau-tindak-lanjut"></p>
+            </li>
+          </ol>
+          <a class="text-link" href="#editor-sesi">Kembali ke isian</a>
+        </section>
+      </div>
     </div>
   </main>
 

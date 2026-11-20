@@ -1,5 +1,22 @@
 # Pemeriksaan Ramu
 
+## T03 — Penyusun sesi
+
+Pada 20 November 2026, seluruh 53 pemeriksaan lulus di Chrome lokal pada Windows. Ruang Sesi dibuka melalui HTTP lokal dan langsung dari `sesi.html`.
+
+| Alur yang dicoba | Hasil |
+| --- | --- |
+| Menulis sesi dari awal | Judul, sasaran, tujuan, dan empat bagian langsung muncul di pratinjau. Baris baru dipertahankan dan teks seperti tag HTML tetap terbaca apa adanya. |
+| Memuat delapan template dari Bank Materi | Judul, tujuan, dan empat bagian setiap template sesuai dengan paket asal. Tautan dari Bank Materi membuka editor kosong. |
+| Mengganti template setelah menyunting | Memilih judul di daftar mempertahankan draf. Tombol **Muat template** meminta konfirmasi. Membatalkan mempertahankan semua isian. Menyetujui penggantian mempertahankan sasaran dan durasi. |
+| Memilih durasi | Empat bagian mendapat 3/7/7/3 menit untuk sesi 20 menit, 4/11/11/4 untuk 30 menit, dan 5/17/17/6 untuk 45 menit. |
+| Menggunakan ponsel dan desktop | Editor dan pratinjau muat pada lebar 320, 360, 768, dan 1440 px, termasuk ketika tujuan berisi kata panjang tanpa spasi. Tautan ke pratinjau memindahkan fokus keyboard pada keempat lebar. |
+| Membuka halaman dengan JavaScript dimatikan | Petunjuk dan navigasi tetap terbaca. Saat JavaScript aktif, seluruh aset editor termuat secara lokal. |
+
+Untuk mencoba perlindungan draf dengan keyboard, muat **Memilih kegiatan lewat musyawarah**, pilih **45 menit**, lalu sunting pembuka. Pilih **Menjaga kebiasaan belajar**, tekan **Muat template**, lalu batalkan. Pembuka hasil suntingan dan durasi 45 menit harus tetap tampil di pratinjau.
+
+Ukuran layar disimulasikan di Chrome. Perangkat fisik, Safari, Firefox, dan pembaca layar belum diuji.
+
 ## T02 — Bank Materi
 
 Pada 19 November 2026, 84 pemeriksaan browser lulus di Chrome lokal. Bank Materi diuji melalui HTTP lokal dan dengan membuka `index.html` langsung dari folder proyek.

@@ -1,6 +1,6 @@
 # Panduan konten
 
-Gunakan bahasa Indonesia sederhana untuk mentor lintas komunitas. Koleksi awal berisi enam bahan diskusi. Setiap panel detail menautkan ayat atau hadis yang digunakan.
+Gunakan bahasa Indonesia sederhana untuk mentor lintas komunitas. Delapan bahan diskusi di Bank Materi juga menjadi pilihan template di Ruang Sesi. Setiap panel detail menautkan ayat atau hadis yang digunakan.
 
 Simpan paket di [materi.js](../assets/js/materi.js). Setiap paket memiliki ID unik, judul, kategori, ringkasan, tujuan, pembuka, pokok bahasan, pertanyaan diskusi, tindak lanjut, dan sumber. Saat mengganti rujukan, cocokkan juga tautan di bagian [Daftar sumber](../panduan.html#sumber).
 
