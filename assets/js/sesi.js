@@ -20,9 +20,13 @@ for (const materi of daftarMateri) {
   pilihanTemplate.append(opsi);
 }
 
-function tampilkanIsian(idKolom, idTujuan, saatKosong) {
+function nilaiIsian(idKolom, saatKosong = 'Belum diisi') {
   const nilai = document.getElementById(idKolom).value;
-  document.getElementById(idTujuan).textContent = nilai.trim() ? nilai : saatKosong;
+  return nilai.trim() ? nilai : saatKosong;
+}
+
+function tampilkanIsian(idKolom, idTujuan, saatKosong) {
+  document.getElementById(idTujuan).textContent = nilaiIsian(idKolom, saatKosong);
 }
 
 function perbaruiPratinjau() {
@@ -58,7 +62,8 @@ function isiTemplate(materi) {
     kolom.defaultValue = isian[id];
   }
   tutupKonfirmasi();
-  perbaruiPratinjau();
+  // Pengisian lewat kode juga perlu memperbarui pratinjau dan ringkasan.
+  editor.dispatchEvent(new Event('input', { bubbles: true }));
   statusTemplate.textContent = 'Template dimuat: ' + materi.judul + '.';
   document.getElementById('judul-sesi').focus();
 }

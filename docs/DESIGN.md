@@ -25,6 +25,7 @@ Seluruh token produk berada di `assets/css/style.css`. Georgia dipakai untuk jud
 - Kontainer maksimal 1160px; gutter 16px di ponsel dan 32px mulai 640px.
 - Navigasi selalu terlihat, menandai halaman aktif dengan `aria-current="page"`.
 - Di bawah 960px, pratinjau sesi berada di bawah editor. Mulai 960px, editor dan pratinjau berdampingan dengan rasio 3:2. Bank Materi dan Panduan memakai sidebar 300px pada lebar desktop.
+- Mode pandu menempatkan langkah aktif di lembar krem dan catatan di panel sage. Di ponsel, tautan menghubungkan kedua bagian agar mentor bisa kembali ke langkah aktif setelah menulis.
 - Daftar isi panduan mendahului artikel pada mobile dan menjadi sidebar kanan pada desktop.
 - Fokus keyboard jelas, skip link ke `main`, target tautan minimal 44px.
 - Transisi hanya warna hover yang singkat; hormati `prefers-reduced-motion`.

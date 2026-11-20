@@ -18,7 +18,7 @@ Ramu adalah ruang kerja sederhana untuk mentor pembinaan Islam lintas komunitas:
 | Halaman | Peran dalam Ramu |
 | --- | --- |
 | [Bank Materi](index.html) | Tempat memilih bahan pembinaan. |
-| [Ruang Sesi](sesi.html) | Menulis rundown dari awal atau dari template, memilih durasi, dan melihat pratinjau saat mengetik. |
+| [Ruang Sesi](sesi.html) | Menyusun sesi, memandu empat langkah pertemuan, mencatat hasil diskusi, dan menyalin ringkasan. |
 | [Panduan & Sumber](panduan.html) | Penjelasan cara pakai, batas draf, dan prinsip kurasi. |
 
 Tampilan memakai teal gelap, kertas krem, sage, serta aksen emas. Bayangan tipis dan lapisan kertas memberi kesan meja kerja yang tenang. Wordmark teks digunakan sambil menunggu persetujuan logo final.
@@ -32,7 +32,7 @@ git clone https://github.com/yurnszzz/Ramu.git
 cd Ramu
 ```
 
-Untuk meninjau penyusun sesi sebelum T03 masuk ke `main`, jalankan `git switch feat/t03-penyusun-sesi` setelah clone.
+Untuk mencoba mode pandu sebelum T04 masuk ke `main`, jalankan `git switch feat/t04-mode-pandu` setelah clone.
 
 Buka `index.html` langsung di browser. Untuk menjalankannya melalui HTTP lokal, gunakan Python dari folder proyek.
 
@@ -46,11 +46,13 @@ Buka [localhost:8000](http://localhost:8000). Hentikan server dengan `Ctrl+C`. N
 
 - **HTML** untuk struktur semantik dan navigasi tiga halaman.
 - **CSS biasa** untuk warna, tipografi, flex/grid, state fokus, dan media query.
-- **JavaScript native** untuk menyaring array materi, membuka detail, mengisi form dari template, dan menampilkan pratinjau melalui DOM.
+- **JavaScript native** untuk menyaring materi, mengisi editor dari template, menampilkan langkah aktif, dan menyusun ringkasan dari isian mentor.
 
 Ramu mengikuti materi FE Basic tanpa framework atau dependensi runtime. Tidak ada backend, akun, database, API data, penyimpanan browser, timer, atau notifikasi.
 
-Draf sesi berada di halaman yang sedang terbuka. Salin teks pratinjau ke catatan pribadi sebelum memuat ulang, menutup tab, atau berpindah halaman.
+Dari editor, pilih **Buka mode pandu** untuk membawakan pembuka, bahasan utama, diskusi, dan tindak lanjut. Jika perlu mengubah pertanyaan saat pertemuan berjalan, kembali ke editor. Saat mode pandu dibuka lagi, Anda dapat melanjutkan langkah yang sama dengan isian terbaru. Centang persiapan dan isi catatan di halaman yang sama.
+
+Rancangan dan catatan hanya tersedia selama halaman terbuka. Sebelum memuat ulang, menutup tab, atau berpindah halaman, pilih teks ringkasan sesi dan salin ke catatan pribadi.
 
 ## Struktur proyek
 
@@ -61,7 +63,7 @@ Ramu/
 ├── panduan.html        # Panduan & Sumber
 ├── assets/
 │   ├── css/            # Style bersama untuk ketiga halaman
-│   └── js/             # Koleksi materi, filter, dan editor sesi
+│   └── js/             # Koleksi materi, filter, editor sesi, dan mode pandu
 ├── docs/               # Desain, batas materi, kurasi, dan hasil QA
 │   └── assets/         # Aset dokumentasi README
 ├── planning/           # Kebutuhan produk dan tahap pengerjaan
@@ -69,7 +71,7 @@ Ramu/
 └── LICENSE
 ```
 
-Koleksi dan sumber berada di [materi.js](assets/js/materi.js). Bank Materi menyaring koleksi di [bank-materi.js](assets/js/bank-materi.js). Editor membaca koleksi yang sama dan memperbarui pratinjau melalui [sesi.js](assets/js/sesi.js). Ketiga file dimuat secara lokal. Tautan rujukan dapat dibuka saat tersedia koneksi internet.
+Bank Materi dan editor memakai koleksi yang sama. Editor mengisi form dan memperbarui pratinjau. Mode pandu membaca isian terbaru dan merangkai ringkasan untuk disalin. Semua skrip dimuat secara lokal. Tautan rujukan dapat dibuka saat tersedia koneksi internet. [Koleksi materi](assets/js/materi.js) · [Filter Bank Materi](assets/js/bank-materi.js) · [Editor sesi](assets/js/sesi.js) · [Mode pandu](assets/js/pandu.js)
 
 ## Tahap pengerjaan
 
@@ -77,8 +79,8 @@ Koleksi dan sumber berada di [materi.js](assets/js/materi.js). Bank Materi menya
 | --- | --- | --- |
 | T01 | Tiga halaman, navigasi, fondasi CSS, dan layout responsif | Digabung ke `main` |
 | T02 | Bank Materi: konten bersumber, pencarian, filter, dan detail | Digabung ke `main` |
-| T03 | Penyusun sesi, template, durasi, dan pratinjau | Siap direview |
-| T04 | Mode pandu, catatan, dan evaluasi sementara | Direncanakan |
+| T03 | Penyusun sesi, template, durasi, dan pratinjau | Digabung ke `main` |
+| T04 | Mode pandu, catatan, dan evaluasi sementara | Siap direview |
 | T05 | Pemeriksaan akhir, dokumentasi, dan pembersihan proyek | Direncanakan |
 
 Satu tahap dikerjakan melalui satu branch dan PR. Tahap berikutnya dimulai setelah PR sebelumnya merge. Detail acceptance ada di [daftar tugas](planning/TASKS.md); hasil pemeriksaan aktual dicatat di [QA](docs/QA.md).

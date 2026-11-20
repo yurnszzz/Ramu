@@ -1,5 +1,21 @@
 # Pemeriksaan Ramu
 
+## T04 — Mode pandu dan evaluasi
+
+Pada 20 November 2026, seluruh 77 pemeriksaan T04 dan 53 pemeriksaan regresi editor T03 lulus di Chrome pada Windows.
+
+| Alur yang dicoba | Hasil |
+| --- | --- |
+| Memandu sesi dengan durasi 20, 30, dan 45 menit | Setiap langkah menampilkan teks dan alokasi yang sesuai. Tombol sebelumnya berhenti di pembuka dan tombol berikutnya berhenti di tindak lanjut. |
+| Menyunting di tengah pertemuan | Setelah kembali ke editor dan mengubah teks atau durasi, mode pandu membuka kembali langkah aktif dengan isian terbaru. Checklist, catatan, dan evaluasi tetap terisi. |
+| Menyiapkan ringkasan | Pergantian template, centang persiapan, status target, dan suntingan catatan tercermin di ringkasan. Baris baru dan teks menyerupai tag HTML terbaca apa adanya. `Ctrl+A` di kolom ringkasan memilih seluruh teks untuk disalin manual. |
+| Berpindah antara langkah dan catatan dengan keyboard | Pada 320, 360, 768, dan 1440 px, tautan **Kembali ke langkah aktif** memindahkan fokus ke judul langkah yang sedang dibaca. Catatan tetap ada. Panel terbuka dan kata panjang muat tanpa gulir horizontal. |
+| Membuka Ruang Sesi langsung dari file | Saat jaringan diputus, template, mode pandu, catatan, dan ringkasan tetap berfungsi. Membuka halaman baru memulai draf kosong. |
+
+Untuk mengulang alur saat memandu, pilih sesi 45 menit dan maju ke **Diskusi**. Isi pertanyaan tertunda, kembali ke editor, lalu ubah pertanyaan diskusi. Saat mode pandu dibuka lagi, langkah ketiga harus memuat teks baru dan alokasi 17 menit. Pertanyaan tertunda harus tetap terbaca di ringkasan.
+
+Ukuran layar disimulasikan di Chrome. Perangkat fisik, Safari, Firefox, dan pembaca layar belum diuji.
+
 ## T03 — Penyusun sesi
 
 Pada 20 November 2026, seluruh 53 pemeriksaan lulus di Chrome lokal pada Windows. Ruang Sesi dibuka melalui HTTP lokal dan langsung dari `sesi.html`.
