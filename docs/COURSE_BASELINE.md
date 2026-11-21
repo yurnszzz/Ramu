@@ -18,4 +18,6 @@ T01 memakai HTML dan CSS untuk tiga halaman. Pada T02, event `input` dan `change
 
 Pada T03, pilihan template mengisi editor dan nilai form ditampilkan di pratinjau. Pada T04, satu indeks menandai langkah yang sedang dipandu. Tombol sebelumnya dan berikutnya berhenti di batas empat langkah. Editor dan mode pandu bergantian tampil dalam dokumen yang sama sehingga isian form tetap tersedia. Mentor dapat menyalin teks ringkasan yang disusun dari rancangan, persiapan, dan evaluasi pertemuan.
 
-Kriteria tugas kelas mencakup proyek individu, minimal dua halaman/section, layout responsif, interaksi JavaScript DOM, dan repository publik. Ramu menargetkan tiga halaman; seluruh kriteria baru lengkap setelah tahap interaktif dan finalisasi. Batas pengumpulan yang diberikan: 20 November 2026, 23:59 WIB melalui Dignition.
+Tugas individu ini mensyaratkan minimal dua halaman atau bagian, layout responsif, interaksi JavaScript DOM, dan repository publik. Ramu memiliki tiga halaman. Hasil pengujian browser dicatat di [QA](QA.md).
+
+Untuk pengumpulan melalui Dignition, tugas meminta tautan repository publik. Batas pengumpulan yang diberikan adalah 20 November 2026 pukul 23.59 WIB. [Repository Ramu](https://github.com/yurnszzz/Ramu)

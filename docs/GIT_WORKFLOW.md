@@ -25,4 +25,4 @@ Pakai identitas Git yang sudah dikonfigurasi pengguna. Jangan membuat commit mun
 
 Terbitkan kode, aset yang disetujui, lisensi, dan dokumentasi yang membantu pembaca menjalankan atau meninjau proyek. Simpan materi kelas asli, kandidat logo, kredensial, dan hasil pengujian sementara di workspace lokal.
 
-PRD dipertahankan sampai finalisasi T05. Menghapusnya dari versi akhir tidak menghapus commit historis; jangan rewrite riwayat untuk menyembunyikan pekerjaan.
+Pada T05, gunakan [README](../README.md) untuk ringkasan fitur dan [catatan QA](QA.md) untuk hasil pengujian. Riwayat rancangan dan perubahan tiap tahap dapat ditelusuri melalui pull request.
