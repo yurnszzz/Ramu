@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+  viewBox="0 0 32 32" fill="#073E43" role="img" aria-labelledby="ramu-favicon-title">
+  <title id="ramu-favicon-title">Favicon Ramu</title>
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .ramu-favicon-ink { fill: #FFF9EC; }
+    }
+  </style>
+  <g id="ramu-favicon-symbol" class="ramu-favicon-ink">
+    <path id="ramu-favicon-left-sheet"
+      d="M2.5 7.35 Q2.5 4.9 4.9 5.35 L8.25 6
+         C11.15 6.55 12 8.65 12 11.9 V16.45
+         Q12 18.55 13.8 19.85 L22.5 26.25
+         Q23.65 27.2 22.22 27.38 L17.3 27.95
+         Q14.9 28.23 12.6 29.2 Q11.9 29.52 11.25 29.02
+         Q8.8 27.25 5.2 26.35 Q2.5 25.65 2.5 22.85 Z"/>
+    <path id="ramu-favicon-right-sheet"
+      d="M15.2 10.35 Q16.55 6.85 21.6 5.65
+         L27.1 4.25 Q29.5 3.65 29.5 6.15 V17.7
+         Q29.5 22.42 26.48 25.25 Q26.02 25.7 25.5 25.3
+         L17.6 19.4 Q16.85 18.85 17.77 18.53
+         Q21.9 17.42 21.9 14.9 Q21.9 11.55 17.3 11.55
+         H16 Q14.75 11.55 15.2 10.35 Z"/>
+  </g>
+</svg>
