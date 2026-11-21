@@ -1,4 +1,1 @@
 * text=auto eol=lf
-*.svg text eol=lf
-*.gif binary
-*.png binary

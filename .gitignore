@@ -1,30 +1,7 @@
-# Local context, design tools, and review artifacts
-.agents/
-.agent/
-.claude/
-.codex/
-.local/
-.taste-skill/
-.impeccable/
-node_modules/
-__pycache__/
-*.pyc
-
-# Credentials and editor/system files
+/.local/
 .env
 .env.*
-!.env.example
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-*.log
-
-# Original reference files and unpublished brand assets
-/Ramu-*.md
-/Ramu-Design-Board.html
-/ramu-*.svg
-/favicon.svg
-/scfe_basic.md
-/Instruksi Final Project*.md
-/*.pdf
